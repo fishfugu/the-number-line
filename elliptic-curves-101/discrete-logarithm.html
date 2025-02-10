@@ -1,0 +1,1003 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="set-group-ring-field.html">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>The Discrete Logarithm Problem - The Number Line</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.d7758b05.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-discrete-logarithm-problem" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="The Number Line" class="md-header__button md-logo" aria-label="The Number Line" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Number Line
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Discrete Logarithm Problem
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="The Number Line" class="md-nav__button md-logo" aria-label="The Number Line" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The Number Line
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Elliptic Curves 101
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Elliptic Curves 101
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="set-group-ring-field.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is a Set, a Group, a Ring, and a Field?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    The Discrete Logarithm Problem
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="discrete-logarithm.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    The Discrete Logarithm Problem
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#group-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Theory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cryptography" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cryptography
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difficulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difficulty
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-study" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Study
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="elliptic-curves-real.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elliptic Curves over ℝ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="theorem-line-intersection.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Theorem / Proof, A line connecting P and Q always intersects a third point
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="additive-inverse.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Additive Inverse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="point-addition.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Points, Doubling Points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="weierstrass-general.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expanding from Weierstrass To General Form
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="associativity.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Associativity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projective-plane.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Projective Plane
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="homogeneous-equations.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homogeneous Equations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="elliptic-curves-finite-field.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elliptic Curves In a Finite Field
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modular-multiplicative-inverse.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Modular Multiplicative Inverse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="slope-formal-derivative.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Slope of an Elliptic Curve (Formal Derivative)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="arithmetic-finite-field.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arithmetic In A Finite Field
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doubling-points-finite-field.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Doubling Points in a Finite Field
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="acknowledgements.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgements and Bibliography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#group-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Theory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cryptography" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cryptography
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difficulty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difficulty
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Application">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-study" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Study
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="the-discrete-logarithm-problem">The Discrete Logarithm Problem</h1>
+<p>The <a href="https://mathworld.wolfram.com/DiscreteLogarithm.html"><strong>Discrete Logarithm Problem</strong></a> is a foundational problem in the field of <strong>cryptography</strong> and <strong>number theory</strong>.</p>
+<hr />
+<p><img alt="abstract representation of cogs representing the discrete logarithm problem" src="img/log-cogs.png" /></p>
+<h2 id="definition">Definition</h2>
+<p>The <strong>Discrete Logarithm Problem</strong> involves finding an integer <span class="arithmatex"><span class="MathJax_Preview"> x </span><script type="math/tex"> x </script></span> given the equation:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview"> g^x \equiv h \mod p </div>
+<script type="math/tex; mode=display"> g^x \equiv h \mod p </script>
+</div>
+<p>where:</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview"> g </span><script type="math/tex"> g </script></span> is a known <a href="https://mathworld.wolfram.com/Base.html#:~:text=The%20word%20%22base%22%20in%20mathematics,in%20which%20logarithms%20are%20defined."><strong>base</strong></a></li>
+<li><span class="arithmatex"><span class="MathJax_Preview"> h </span><script type="math/tex"> h </script></span> is a known <strong>result</strong></li>
+<li><span class="arithmatex"><span class="MathJax_Preview"> p </span><script type="math/tex"> p </script></span> is a <a href="https://mathworld.wolfram.com/PrimeNumber.html#:~:text=A%20prime%20number%20(or%20prime,other%20than%201%20and%20itself.)"><strong>prime number</strong></a> (or the <a href="https://mathworld.wolfram.com/GroupOrder.html">order of the group</a> in more general settings)</li>
+</ul>
+<p>In reference to the idea of <a href="set-group-ring-field.html">operations on sets of elements</a>, the operation:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview"> g^h </div>
+<script type="math/tex; mode=display"> g^h </script>
+</div>
+<p>refers to applying the operation (in this case, multiplication <code>*</code>) <strong>h</strong> times. That is:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview"> g^h = g \times g \times g \times \dots \times g \quad \text{(h times)} </div>
+<script type="math/tex; mode=display"> g^h = g \times g \times g \times \dots \times g \quad \text{(h times)} </script>
+</div>
+<p>In the case of <strong>elliptic curves</strong>, we often refer to the same problem, in terms of the <code>+</code> operation:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview"> gh = h + h + h + \dots + h \quad \text{(h times)} </div>
+<script type="math/tex; mode=display"> gh = h + h + h + \dots + h \quad \text{(h times)} </script>
+</div>
+<p>But the complexity of reversing the operation is still referred to as the <strong>Discrete Logarithm Problem</strong>.</p>
+<hr />
+<h2 id="context">Context</h2>
+<h3 id="group-theory"><a href="https://mathworld.wolfram.com/GroupTheory.html#:~:text=Group%20theory%20is%20a%20powerful,in%20physics%2C%20especially%20quantum%20mechanics."><strong>Group Theory</strong></a></h3>
+<p>The problem is defined within the context of <a href="https://mathworld.wolfram.com/GroupTheory.html#:~:text=Group%20theory%20is%20a%20powerful,in%20physics%2C%20especially%20quantum%20mechanics."><strong>cyclic groups</strong></a>, where the operations are performed under <a href="https://mathworld.wolfram.com/ModularArithmetic.html#:~:text=Modular%20arithmetic%20is%20the%20arithmetic,or%20seconds%20on%20a%20clock)."><strong>modular arithmetic</strong></a>.</p>
+<h3 id="cryptography"><a href="https://mathworld.wolfram.com/Cryptography.html"><strong>Cryptography</strong></a></h3>
+<p>The <strong>Discrete Logarithm Problem</strong> is crucial in the security of <a href="https://mathworld.wolfram.com/Diffie-HellmanProtocol.html">cryptographic protocols</a>, particularly in <a href="https://mathworld.wolfram.com/Public-KeyCryptography.html"><strong>public key cryptography</strong></a>, such as:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange"><strong>Diffie-Hellman key exchange</strong></a></li>
+<li><a href="https://planetmath.org/ellipticcurvecryptography"><strong>Elliptic Curve Cryptography (ECC)</strong></a></li>
+</ul>
+<hr />
+<h2 id="difficulty">Difficulty</h2>
+<p>The <strong>"discrete"</strong> part of the name emphasizes that this problem is concerned with <strong>integers</strong>, unlike its continuous counterpart in real numbers.</p>
+<p>The complexity of finding <span class="arithmatex"><span class="MathJax_Preview"> k </span><script type="math/tex"> k </script></span> in the equation:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview"> kP \equiv Q </div>
+<script type="math/tex; mode=display"> kP \equiv Q </script>
+</div>
+<p>(for multiplication on an elliptic curve) is what makes it valuable for cryptography.</p>
+<p>There are <strong>no known efficient (polynomial time) algorithms</strong> for solving it in general cases, making it a <strong>computationally hard problem</strong>.</p>
+<p>For applications in cryptography, we seek groups where the <strong>Discrete Logarithm Problem</strong> is <strong>computationally difficult</strong> to solve.</p>
+<hr />
+<h2 id="application">Application</h2>
+<h3 id="security"><a href="https://nap.nationalacademies.org/resource/other/deps/illustrating-math/interactive/mathematics-of-internet-security.html"><strong>Security</strong></a></h3>
+<p>The <a href="https://math.mit.edu/classes/18.783/2022/LectureNotes9.pdf">difficulty of the <strong>Discrete Logarithm Problem</strong></a> underpins the security of various <a href="https://en.wikipedia.org/wiki/Encryption"><strong>encryption systems</strong></a> and <a href="https://en.wikipedia.org/wiki/Digital_signature"><strong>digital signatures</strong></a>, where:</p>
+<ul>
+<li>It is <strong>easy to compute</strong> exponentiation.</li>
+<li>It is <strong>hard to reverse</strong> (i.e., compute the logarithm).</li>
+<li>This provides <a href="https://en.wikipedia.org/wiki/Public-key_cryptography"><strong>cryptographic security</strong></a>.</li>
+</ul>
+<hr />
+<h2 id="further-study">Further Study</h2>
+<p>For an interesting investigation of the <strong>algebra</strong> behind the <strong>Discrete Logarithm Problem</strong>, and its importance in <strong>Applied Cryptography</strong>, check out:</p>
+<p>🔗 <a href="https://www.youtube.com/watch?v=n41Z0c9Jm4Y&amp;list=PL1xkDS1G9As7E_fPaLaFchq1a27I9a5tO">Leandro Junes' YouTube playlist: The Discrete Logarithm Problem</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>
