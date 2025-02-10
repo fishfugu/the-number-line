@@ -1,0 +1,25 @@
+/* Decrease spacing above and below block equations */
+.katex-display {
+    margin: 0.1em 0;
+}
+
+/* Fine-tune inline equation spacing */
+.katex {
+    margin: 0px;
+}
+
+/* Reduce space above all headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+}
+
+hr {
+    margin: 0.1em;
+    margin-bottom: 0.1em;
+    border: 1px solid #ddd;
+}

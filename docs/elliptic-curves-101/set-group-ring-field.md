@@ -8,7 +8,8 @@
 
 ## Set
 
-A [**set**](<https://en.wikipedia.org/wiki/Set_(mathematics)>) is a collection of distinct objects, considered as an object in its own right. These objects are called the elements or members of the set.  
+A [**set**](<https://en.wikipedia.org/wiki/Set_(mathematics)>) is a collection of distinct objects, considered as an object in its own right. These objects are called the elements or members of the set.
+
 [More on sets - Wolfram MathWorld](https://mathworld.wolfram.com/Set.html)
 
 ---
@@ -26,8 +27,7 @@ A [**group**](<https://en.wikipedia.org/wiki/Group_(mathematics)>) is a **set** 
 ### **Associative Property**
 
 An operation is "**associative**" if changing the grouping of the operands does not change the result. If the operation is denoted by `*`, then for any elements \(a, b, c\):
-
-\[ (a \ast b) \ast c = a \ast (b \ast c) \]
+$$ (a \ast b) \ast c = a \ast (b \ast c) $$
 
 always holds.
 
@@ -36,8 +36,7 @@ always holds.
 An **identity element** is an element in a set that, when combined with any other element of the set through a specific binary operation, leaves the other element unchanged.
 
 For a binary operation `*` defined on a set \( S \), an element \( e \in S \) is an identity element if, for every element \( a \in S \):
-
-\[ e_a = a \quad \text{and} \quad a_e = a \]
+$$ e_a = a \quad \text{and} \quad a_e = a $$
 
 Common examples include:
 
@@ -49,8 +48,7 @@ Common examples include:
 An **inverse** under a particular binary operation is an element that, when combined with another element, results in the identity element.
 
 For an operation `*` defined on a set, if \( e \) is the identity element, then for any element \( a \) in the set, an element \( b \) (often denoted as \( a^{-1} \)) is called the inverse of \( a \) if:
-
-\[ a \ast b = e \quad \text{and} \quad b \ast a = e \]
+$$ a \ast b = e \quad \text{and} \quad b \ast a = e $$
 
 Common examples:
 
@@ -62,16 +60,14 @@ Common examples:
 ## Abelian Group
 
 An **abelian group** is a group in which the group operation is also **commutative** (as well as **associative**). "**Commutative**" means that the order in which two elements are combined does not affect the result:
-
-\[ a \ast b = b \ast a \]
+$$ a \ast b = b \ast a $$
 
 [More on abelian groups - Wolfram MathWorld](https://mathworld.wolfram.com/AbelianGroup.html)
 
 ### **Commutative Property**
 
 An operation is **commutative** if:
-
-\[ a \ast b = b \ast a \]
+$$ a \ast b = b \ast a $$
 
 for all elements \( a, b \) in the set.
 

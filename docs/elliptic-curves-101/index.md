@@ -10,6 +10,8 @@ Welcome to **Elliptic Curves 101**. The content for this section of The Number L
 
 The material has been copied here (and not simply linked to) so that it can be updated and improved over time, without the requirement to edit the original site. We will be updating the information here, to ensure it is as clear and helpful as possible.
 
+---
+
 ## Introduction
 
 **Elliptic curves** are a cornerstone of modern cryptographic systems. They have applications in, and generate interest in, many areas of:
@@ -28,7 +30,7 @@ The **Elliptic Curves 101** section of this site contains introductory informati
 
 To navigate:
 
-- Take a look at the topic areas in the left hand nav, under the **Elliptic Curves 101** heading, for ares of interest.
+- Take a look at the topic areas in the left hand nav, under **Elliptic Curves 101**.
 - Use the following list of links to jump directly to a specific topic area.
 
 ---

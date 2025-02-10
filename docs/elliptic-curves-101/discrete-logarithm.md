@@ -9,8 +9,7 @@ The [**Discrete Logarithm Problem**](https://mathworld.wolfram.com/DiscreteLogar
 ## Definition
 
 The **Discrete Logarithm Problem** involves finding an integer \( x \) given the equation:
-
-\[ g^x \equiv h \mod p \]
+$$ g^x \equiv h \mod p $$
 
 where:
 
@@ -19,16 +18,13 @@ where:
 - \( p \) is a [**prime number**](<https://mathworld.wolfram.com/PrimeNumber.html#:~:text=A%20prime%20number%20(or%20prime,other%20than%201%20and%20itself.)>) (or the [order of the group](https://mathworld.wolfram.com/GroupOrder.html) in more general settings)
 
 In reference to the idea of [operations on sets of elements](set-group-ring-field.md), the operation:
-
-\[ g^h \]
+$$ g^h $$
 
 refers to applying the operation (in this case, multiplication `*`) **h** times. That is:
-
-\[ g^h = g \times g \times g \times \dots \times g \quad \text{(h times)} \]
+$$ g^h = g \times g \times g \times \dots \times g \quad \text{(h times)} $$
 
 In the case of **elliptic curves**, we often refer to the same problem, in terms of the `+` operation:
-
-\[ gh = h + h + h + \dots + h \quad \text{(h times)} \]
+$$ gh = h + h + h + \dots + h \quad \text{(h times)} $$
 
 But the complexity of reversing the operation is still referred to as the **Discrete Logarithm Problem**.
 
@@ -54,8 +50,7 @@ The **Discrete Logarithm Problem** is crucial in the security of [cryptographic 
 The **"discrete"** part of the name emphasizes that this problem is concerned with **integers**, unlike its continuous counterpart in real numbers.
 
 The complexity of finding \( k \) in the equation:
-
-\[ kP \equiv Q \]
+$$ kP \equiv Q $$
 
 (for multiplication on an elliptic curve) is what makes it valuable for cryptography.
 
