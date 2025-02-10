@@ -1,6 +1,13 @@
 site_name: The Number Line
 theme:
   name: material
+  static_templates:
+    - images
+
+use_directory_urls: false
+
+plugins:
+  - search
 
 markdown_extensions:
   - pymdownx.arithmatex
@@ -8,6 +15,28 @@ markdown_extensions:
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js
   - https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 extra_css:
   - https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css
+
+nav:
+  - Home: index.md
+  - Elliptic Curves 101:
+      - Introduction: elliptic-curves-101/index.md
+      - What is a Set, a Group, a Ring, and a Field?: elliptic-curves-101/set-group-ring-field.md
+      - The Discrete Logarithm Problem: elliptic-curves-101/discrete-logarithm.md
+      - Elliptic Curves over ℝ: elliptic-curves-101/elliptic-curves-real.md
+      - Theorem / Proof, A line connecting P and Q always intersects a third point: elliptic-curves-101/theorem-line-intersection.md
+      - The Additive Inverse: elliptic-curves-101/additive-inverse.md
+      - Adding Points, Doubling Points: elliptic-curves-101/point-addition.md
+      - Expanding from Weierstrass To General Form: elliptic-curves-101/weierstrass-general.md
+      - Associativity: elliptic-curves-101/associativity.md
+      - The Projective Plane: elliptic-curves-101/projective-plane.md
+      - Homogeneous Equations: elliptic-curves-101/homogeneous-equations.md
+      - Elliptic Curves In a Finite Field: elliptic-curves-101/elliptic-curves-finite-field.md
+      - The Modular Multiplicative Inverse: elliptic-curves-101/modular-multiplicative-inverse.md
+      - The Slope of an Elliptic Curve (Formal Derivative): elliptic-curves-101/slope-formal-derivative.md
+      - Arithmetic In A Finite Field: elliptic-curves-101/arithmetic-finite-field.md
+      - Doubling Points in a Finite Field: elliptic-curves-101/doubling-points-finite-field.md
+      - Acknowledgements and Bibliography: elliptic-curves-101/acknowledgements.md
