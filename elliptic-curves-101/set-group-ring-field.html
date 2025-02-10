@@ -45,6 +45,8 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
     
+      <link rel="stylesheet" href="../assets/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -515,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-real.md" class="md-nav__link">
+      <a href="elliptic-curves-real.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1026,8 +1028,8 @@
 <hr />
 <p><img alt="abstract representation of sets, groups, rings and fields in Elliptic Curve" src="img/rings.png" /></p>
 <h2 id="set">Set</h2>
-<p>A <a href="https://en.wikipedia.org/wiki/Set_(mathematics)"><strong>set</strong></a> is a collection of distinct objects, considered as an object in its own right. These objects are called the elements or members of the set.<br />
-<a href="https://mathworld.wolfram.com/Set.html">More on sets - Wolfram MathWorld</a></p>
+<p>A <a href="https://en.wikipedia.org/wiki/Set_(mathematics)"><strong>set</strong></a> is a collection of distinct objects, considered as an object in its own right. These objects are called the elements or members of the set.</p>
+<p><a href="https://mathworld.wolfram.com/Set.html">More on sets - Wolfram MathWorld</a></p>
 <hr />
 <h2 id="group">Group</h2>
 <p>A <a href="https://en.wikipedia.org/wiki/Group_(mathematics)"><strong>group</strong></a> is a <strong>set</strong> equipped with an operation that combines any two elements to form a third element (which also must belong to the set) in such a way that it is:</p>
@@ -1038,19 +1040,13 @@
 </ul>
 <p><a href="https://mathworld.wolfram.com/Group.html">More on groups - Wolfram MathWorld</a></p>
 <h3 id="associative-property"><strong>Associative Property</strong></h3>
-<p>An operation is "<strong>associative</strong>" if changing the grouping of the operands does not change the result. If the operation is denoted by <code>*</code>, then for any elements <span class="arithmatex"><span class="MathJax_Preview">a, b, c</span><script type="math/tex">a, b, c</script></span>:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview"> (a \ast b) \ast c = a \ast (b \ast c) </div>
-<script type="math/tex; mode=display"> (a \ast b) \ast c = a \ast (b \ast c) </script>
-</div>
+<p>An operation is "<strong>associative</strong>" if changing the grouping of the operands does not change the result. If the operation is denoted by <code>*</code>, then for any elements <span class="arithmatex"><span class="MathJax_Preview">a, b, c</span><script type="math/tex">a, b, c</script></span>:
+$$ (a \ast b) \ast c = a \ast (b \ast c) $$</p>
 <p>always holds.</p>
 <h3 id="identity-element"><strong>Identity Element</strong></h3>
 <p>An <strong>identity element</strong> is an element in a set that, when combined with any other element of the set through a specific binary operation, leaves the other element unchanged.</p>
-<p>For a binary operation <code>*</code> defined on a set <span class="arithmatex"><span class="MathJax_Preview"> S </span><script type="math/tex"> S </script></span>, an element <span class="arithmatex"><span class="MathJax_Preview"> e \in S </span><script type="math/tex"> e \in S </script></span> is an identity element if, for every element <span class="arithmatex"><span class="MathJax_Preview"> a \in S </span><script type="math/tex"> a \in S </script></span>:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview"> e_a = a \quad \text{and} \quad a_e = a </div>
-<script type="math/tex; mode=display"> e_a = a \quad \text{and} \quad a_e = a </script>
-</div>
+<p>For a binary operation <code>*</code> defined on a set <span class="arithmatex"><span class="MathJax_Preview"> S </span><script type="math/tex"> S </script></span>, an element <span class="arithmatex"><span class="MathJax_Preview"> e \in S </span><script type="math/tex"> e \in S </script></span> is an identity element if, for every element <span class="arithmatex"><span class="MathJax_Preview"> a \in S </span><script type="math/tex"> a \in S </script></span>:
+$$ e_a = a \quad \text{and} \quad a_e = a $$</p>
 <p>Common examples include:</p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> for addition</li>
@@ -1058,11 +1054,8 @@
 </ul>
 <h3 id="inverse-element"><strong>Inverse Element</strong></h3>
 <p>An <strong>inverse</strong> under a particular binary operation is an element that, when combined with another element, results in the identity element.</p>
-<p>For an operation <code>*</code> defined on a set, if <span class="arithmatex"><span class="MathJax_Preview"> e </span><script type="math/tex"> e </script></span> is the identity element, then for any element <span class="arithmatex"><span class="MathJax_Preview"> a </span><script type="math/tex"> a </script></span> in the set, an element <span class="arithmatex"><span class="MathJax_Preview"> b </span><script type="math/tex"> b </script></span> (often denoted as <span class="arithmatex"><span class="MathJax_Preview"> a^{-1} </span><script type="math/tex"> a^{-1} </script></span>) is called the inverse of <span class="arithmatex"><span class="MathJax_Preview"> a </span><script type="math/tex"> a </script></span> if:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview"> a \ast b = e \quad \text{and} \quad b \ast a = e </div>
-<script type="math/tex; mode=display"> a \ast b = e \quad \text{and} \quad b \ast a = e </script>
-</div>
+<p>For an operation <code>*</code> defined on a set, if <span class="arithmatex"><span class="MathJax_Preview"> e </span><script type="math/tex"> e </script></span> is the identity element, then for any element <span class="arithmatex"><span class="MathJax_Preview"> a </span><script type="math/tex"> a </script></span> in the set, an element <span class="arithmatex"><span class="MathJax_Preview"> b </span><script type="math/tex"> b </script></span> (often denoted as <span class="arithmatex"><span class="MathJax_Preview"> a^{-1} </span><script type="math/tex"> a^{-1} </script></span>) is called the inverse of <span class="arithmatex"><span class="MathJax_Preview"> a </span><script type="math/tex"> a </script></span> if:
+$$ a \ast b = e \quad \text{and} \quad b \ast a = e $$</p>
 <p>Common examples:</p>
 <ul>
 <li><strong>Additive inverse</strong>: <span class="arithmatex"><span class="MathJax_Preview"> a + (-a) = 0 </span><script type="math/tex"> a + (-a) = 0 </script></span></li>
@@ -1070,18 +1063,12 @@
 </ul>
 <hr />
 <h2 id="abelian-group">Abelian Group</h2>
-<p>An <strong>abelian group</strong> is a group in which the group operation is also <strong>commutative</strong> (as well as <strong>associative</strong>). "<strong>Commutative</strong>" means that the order in which two elements are combined does not affect the result:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview"> a \ast b = b \ast a </div>
-<script type="math/tex; mode=display"> a \ast b = b \ast a </script>
-</div>
+<p>An <strong>abelian group</strong> is a group in which the group operation is also <strong>commutative</strong> (as well as <strong>associative</strong>). "<strong>Commutative</strong>" means that the order in which two elements are combined does not affect the result:
+$$ a \ast b = b \ast a $$</p>
 <p><a href="https://mathworld.wolfram.com/AbelianGroup.html">More on abelian groups - Wolfram MathWorld</a></p>
 <h3 id="commutative-property"><strong>Commutative Property</strong></h3>
-<p>An operation is <strong>commutative</strong> if:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview"> a \ast b = b \ast a </div>
-<script type="math/tex; mode=display"> a \ast b = b \ast a </script>
-</div>
+<p>An operation is <strong>commutative</strong> if:
+$$ a \ast b = b \ast a $$</p>
 <p>for all elements <span class="arithmatex"><span class="MathJax_Preview"> a, b </span><script type="math/tex"> a, b </script></span> in the set.</p>
 <hr />
 <h2 id="ring">Ring</h2>
