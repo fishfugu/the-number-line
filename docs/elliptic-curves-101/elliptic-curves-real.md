@@ -1,4 +1,4 @@
-# Elliptic Curves over ℝ
+# Elliptic Curves over \( \mathbb{R} \)
 
 [Elliptic curves](https://mathworld.wolfram.com/EllipticCurve.html#:~:text=Formally%2C%20an%20elliptic%20curve%20over,%2C%20or%20a%20finite%20field.) have applications in various mathematical fields, including [**number theory**](https://mathworld.wolfram.com/NumberTheory.html#:~:text=Number%20theory%20is%20a%20vast,the%20properties%20of%20whole%20numbers.) and [**cryptography**](https://mathworld.wolfram.com/Cryptography.html).
 
@@ -101,55 +101,49 @@ If **\( P \)** and **\( Q \)** are points on the curve, their sum **\( P + Q \)*
 
 ### **Special Cases in Point Addition**
 
-#### **When \( P = Q \) (Point Doubling)**
+#### When \( P = Q \)
 
-If **\( P = Q \)**, the line through \( P \) and \( Q \) becomes a **tangent line** to the curve at **\( P \)**.
-$$ P + P = 2P = -R $$
+When \( P = Q \) (i.e the points you are adding together are equal), as described above under "Group Law":
+$$ P + Q = 2P $$
 
-This means we compute the **slope** as:
-$$ m = \frac{x_P^2 + A}{2y_P} $$
+so the equation for the gradient:
+$$ m = \frac{ y_Q - y_P }{ x_Q - x_P } $$
 
-[(Washington, L. C., 2008, pp. 13-14, Section 2.2)](acknowledgements-bibliography)
+no longer makes any sense - because:
+$$ x_Q - x_P = 0 $$
 
-<div style="float: right; margin-left: 15px;">
-    <img src="img/group-law-3.png" alt="graph showing two different Elliptic Curves in the Real numbers, one continuous, and one with 2 separate sections" width="300px">
-</div>
+and therefore, the denominator would be 0.
 
-#### **When \( y = 0 \)**
+So we need to find the slope of E:
+$$ m = \frac{ x_P^2 + a }{ 2 y_P } $$
 
-If \( P \) lies on the x-axis (\( y = 0 \)), then:
-$$ 2P = \mathscr{O} $$
+([Washington, L. C., 2008, pp13-14, Section 2.2](acknowledgements-bibliography.md))
 
-where **\( \mathscr{O} \)** is the **point at infinity**.
+The concept of finding the slope of an Elliptic Curve will be further explored in [the section on "Formal Derivatives"](slope-of-elliptic-curve.md). For now, we will simply say that we use the derivative for finding the slope at a point on the curve.
 
-#### **Group Identity: The Point at Infinity**
+#### When \( y = 0 \)
 
-Any vertical line **intersects** the curve at the **point at infinity** \( \mathscr{O} \).
+That is: the tangent to the curve E is a vertical line.
 
-This point acts as the **identity element** for the group:
-$$ P + \mathscr{O} = P $$
+So:
+$$ 2P = \text{"the point at infinity"} $$
 
-The **additive inverse** of a point \( (x, y) \) is:
-$$ (x, -y) $$
+It can also be shown, related to the definition of addition for elliptic curves, that any straight line that passes through 3 point on the curve (\( P \), \( Q \) and \( R \) ) represents the fact that:
+$$ P + Q + R = 0 $$
 
-which is simply the **reflection over the x-axis**.
+For this, and many related reasons, the "point at infinity" is taken to be the "additive neutral element" for the Group defined for Elliptic Curves ([Washington, Section 2.3, pp18-20](acknowledgements-bibliography.md)).
 
-### **The Three-Point Property**
-
-It can be shown that any **straight line** passing through three points on the curve \( (P, Q, R) \) represents:
-$$ P + Q + R = \mathscr{O} $$
-
-For this, and many related reasons, the "**point at infinity**" is taken to be the "**additive neutral element**" for the Group defined for Elliptic Curves ([Washington, Section 2.3, pp. 18-20](acknowledgements-bibliography)).
+NOTE: When defined in \( \mathbb{R} \), it can easily be shown that, if the tangent line to the curve \( E \) is anything other than vertical, [it will intersect with E (in the Affine plane), at another point](line-connecting-p-q-intersect-third-point.md).
 
 ---
 
 ## Applications
 
-### **Cryptography**
+### **[Cryptography](https://en.wikipedia.org/wiki/Cryptography)**
 
 Elliptic curves over \( \mathbb{R} \) serve as **simpler models** for understanding more **complex cryptographic schemes** over finite fields and rings, including those used in **Elliptic Curve Cryptography (ECC)**.
 
-### **Theoretical Mathematics**
+### **[Theoretical Mathematics](https://en.wikipedia.org/wiki/Algebraic_geometry)**
 
 Elliptic curves are studied for their properties in **algebraic geometry** and **number theory**.
 
@@ -157,13 +151,13 @@ Elliptic curves are studied for their properties in **algebraic geometry** and *
 
 ## Challenges & Considerations
 
-### **Visualization**
+### **[Visualisation](https://mathworld.wolfram.com/EllipticCurve.html#:~:text=Informally%2C%20an%20elliptic%20curve%20is,form%20of%20an%20elliptic%20curve.)**
 
 Unlike elliptic curves over finite fields (used in cryptography), curves over \( \mathbb{R} \) can be **graphically represented**, making visual learning **more intuitive**.
 
-### **Complexity in Handling**
+### **[Complexity in Handling](<https://math.libretexts.org/Under_Construction/Purgatory/Book%3A_Active_Calculus_(Boelkins_et_al.)/01%3A_Understanding_the_Derivative/1.07%3A_Limits_Continuity_and_Differentiability>)**
 
-While real-number elliptic curves are **easier to visualize**, they introduce complexities in ensuring **mathematical rigor**, especially concerning:
+While real-number elliptic curves are **easier to visualise**, they introduce complexities in ensuring **mathematical rigor**, especially concerning:
 
 - **Limits**
 - **Continuity**

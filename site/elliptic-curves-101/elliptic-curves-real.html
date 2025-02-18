@@ -1,0 +1,1286 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="discrete-logarithm.html">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Elliptic Curves over ℝ - The Number Line</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.d7758b05.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../assets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#elliptic-curves-over-r" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="The Number Line" class="md-header__button md-logo" aria-label="The Number Line" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Number Line
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Elliptic Curves over ℝ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="The Number Line" class="md-nav__button md-logo" aria-label="The Number Line" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The Number Line
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Elliptic Curves 101
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Elliptic Curves 101
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="set-group-ring-field.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is a Set, a Group, a Ring, and a Field?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="discrete-logarithm.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Discrete Logarithm Problem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Elliptic Curves over ℝ
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="elliptic-curves-real.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Elliptic Curves over ℝ
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-weierstrass-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Weierstrass Equation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-of-ecs-in-the-weierstrass-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation of ECs in the Weierstrass form
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometric-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometric Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geometric Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discriminant-and-shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discriminant and Shape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symmetry
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-law-addition-of-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Law: Addition of Points
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Group Law: Addition of Points">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-cases-in-point-addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Cases in Point Addition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Cases in Point Addition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-p-q-p-q-point-doubling" class="md-nav__link">
+    <span class="md-ellipsis">
+      When P = Q P = Q (Point Doubling)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-y-0-y-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      When y = 0 y = 0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-identity-the-point-at-infinity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Identity: The Point at Infinity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-three-point-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three-Point Property
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cryptography" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cryptography
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theoretical-mathematics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theoretical Mathematics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#challenges-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenges &amp; Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Challenges & Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complexity-in-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complexity in Handling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="theorem-line-intersection.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Theorem / Proof, A line connecting P and Q always intersects a third point
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="additive-inverse.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Additive Inverse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="point-addition.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Points, Doubling Points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="weierstrass-general.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expanding from Weierstrass To General Form
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="associativity.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Associativity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projective-plane.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Projective Plane
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="homogeneous-equations.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homogeneous Equations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="elliptic-curves-finite-field.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elliptic Curves In a Finite Field
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="modular-multiplicative-inverse.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Modular Multiplicative Inverse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="slope-formal-derivative.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Slope of an Elliptic Curve (Formal Derivative)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="arithmetic-finite-field.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arithmetic In A Finite Field
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doubling-points-finite-field.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Doubling Points in a Finite Field
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="acknowledgements.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgements and Bibliography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-weierstrass-equation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Weierstrass Equation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-of-ecs-in-the-weierstrass-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation of ECs in the Weierstrass form
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometric-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geometric Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geometric Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discriminant-and-shape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discriminant and Shape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symmetry
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-law-addition-of-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Law: Addition of Points
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Group Law: Addition of Points">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-cases-in-point-addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Cases in Point Addition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Cases in Point Addition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-p-q-p-q-point-doubling" class="md-nav__link">
+    <span class="md-ellipsis">
+      When P = Q P = Q (Point Doubling)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-y-0-y-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      When y = 0 y = 0
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-identity-the-point-at-infinity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Identity: The Point at Infinity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-three-point-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Three-Point Property
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cryptography" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cryptography
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theoretical-mathematics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theoretical Mathematics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#challenges-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Challenges &amp; Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Challenges & Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complexity-in-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complexity in Handling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="elliptic-curves-over-r">Elliptic Curves over ℝ</h1>
+<p><a href="https://mathworld.wolfram.com/EllipticCurve.html#:~:text=Formally%2C%20an%20elliptic%20curve%20over,%2C%20or%20a%20finite%20field.">Elliptic curves</a> have applications in various mathematical fields, including <a href="https://mathworld.wolfram.com/NumberTheory.html#:~:text=Number%20theory%20is%20a%20vast,the%20properties%20of%20whole%20numbers."><strong>number theory</strong></a> and <a href="https://mathworld.wolfram.com/Cryptography.html"><strong>cryptography</strong></a>.</p>
+<hr />
+<div style="float: left; margin-right: 15px;">
+    <img src="img/ec-in-R.png" alt="graph showing two different Elliptic Curves in the Real numbers, one continuous, and one with 2 separate sections" width="300px">
+</div>
+<h2 id="definition">Definition</h2>
+<p>An <strong>elliptic curve</strong> over <span class="arithmatex"><span class="MathJax_Preview"> \mathbb{R} </span><script type="math/tex"> \mathbb{R} </script></span> is defined by a <a href="https://mathworld.wolfram.com/CubicEquation.html#:~:text=A%20cubic%20equation%20is%20an,solutions%20of%20a%20cubic%20equation.">cubic equation</a> of the form:
+$$ y^2 = x^3 + Ax + B $$</p>
+<p>where <span class="arithmatex"><span class="MathJax_Preview"> A </span><script type="math/tex"> A </script></span> and <span class="arithmatex"><span class="MathJax_Preview"> B </span><script type="math/tex"> B </script></span> are <a href="https://mathworld.wolfram.com/Coefficient.html">real coefficients</a>.</p>
+<p>When these coefficients satisfy the condition:
+$$ 4A^3 + 27B^2 \neq 0 $$</p>
+<p>the curve is <a href="https://mathworld.wolfram.com/Determinant.html"><strong>non-singular</strong></a>.</p>
+<p>Elliptic curves that do not satisfy this condition are called <strong>singular elliptic curves</strong>.</p>
+<h3 id="the-weierstrass-equation"><strong>The Weierstrass Equation</strong></h3>
+<p>In the form:
+$$ y^2 = x^3 + Ax + B $$</p>
+<p>an elliptic curve is said to be in the <strong>Weierstrass Equation form</strong>.</p>
+<p>There are <a href="https://mathworld.wolfram.com/EllipticCurve.html">more general equations that define elliptic curves</a> over <span class="arithmatex"><span class="MathJax_Preview"> \mathbb{R} </span><script type="math/tex"> \mathbb{R} </script></span> (<a href="acknowledgements-bibliography.md">Washington, L. C., 2008, pp. 35-42, Section 2.5</a>). However, elliptic curves can be <a href="https://crypto.stanford.edu/pbc/notes/elliptic/weier.html"><strong>converted</strong> into the Weierstrass Equation form</a> when defined across fields with <a href="https://mathworld.wolfram.com/EllipticCurve.html">a characteristic other than <strong>2 or 3</strong></a>.</p>
+<hr />
+<h2 id="animation-of-ecs-in-the-weierstrass-form">Animation of ECs in the Weierstrass form</h2>
+<p>See below, an animation of different elliptic curves in the Weierstrass Form, for varying values of the coefficients A and B (in the equation <span class="arithmatex"><span class="MathJax_Preview"> y^2 = x^3 + Ax + B </span><script type="math/tex"> y^2 = x^3 + Ax + B </script></span>):</p>
+<div style="text-align: center;">
+  <video width="640" height="360" controls>
+    <source src="vid/weierstrass-form.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<hr />
+<div style="float: left; margin-right: 15px;">
+    <img src="img/geometry.jpg" alt="graph showing two different Elliptic Curves in the Real numbers, one continuous, and one with 2 separate sections" width="250px">
+</div>
+
+<h2 id="geometric-features">Geometric Features</h2>
+<h3 id="discriminant-and-shape"><strong>Discriminant and Shape</strong></h3>
+<p>The shape of an elliptic curve in Weierstrass form depends on the <strong>discriminant</strong>:
+$$ \Delta = -16(4A^3 + 27B^2) $$</p>
+<p>(<a href="acknowledgements-bibliography">Washington, L. C., 2008, pp. 9-11, Section 2.1</a>)</p>
+<hr />
+<div style="float: right; margin-left: 15px;">
+    <img src="img/geometry2.jpg" alt="graph showing two different Elliptic Curves in the Real numbers, one continuous, and one with 2 separate sections" width="250px">
+</div>
+
+<ul>
+<li>
+<p>If <strong><span class="arithmatex"><span class="MathJax_Preview"> \Delta &lt; 0 </span><script type="math/tex"> \Delta < 0 </script></span></strong>, the curve is a <strong>single, connected loop</strong>.<br />
+  The cubic equation: <span class="arithmatex"><span class="MathJax_Preview"> x^3 + Ax + B = 0 </span><script type="math/tex"> x^3 + Ax + B = 0 </script></span> has <strong>one real solution</strong>.</p>
+</li>
+<li>
+<p>If <strong><span class="arithmatex"><span class="MathJax_Preview"> \Delta &gt; 0 </span><script type="math/tex"> \Delta > 0 </script></span></strong>, the curve consists of <strong>two disjoint loops</strong>.<br />
+  The cubic equation: <span class="arithmatex"><span class="MathJax_Preview"> x^3 + Ax + B = 0 </span><script type="math/tex"> x^3 + Ax + B = 0 </script></span> has <strong>three real solutions</strong>.</p>
+</li>
+</ul>
+<p><strong>Note:</strong> The definition of these "loops" will become clearer once we introduce the concept of <a href="projective-plane"><strong>the point at infinity</strong></a>. For now, we accept that the far end of each curve <strong>connects at infinity</strong>.</p>
+<h3 id="symmetry"><strong>Symmetry</strong></h3>
+<p>Every elliptic curve in Weierstrass form is <strong>symmetric</strong> about the <strong>x-axis</strong>.<br />
+If <span class="arithmatex"><span class="MathJax_Preview"> (x, y) </span><script type="math/tex"> (x, y) </script></span> is on the curve, then so is <span class="arithmatex"><span class="MathJax_Preview"> (x, -y) </span><script type="math/tex"> (x, -y) </script></span>.</p>
+<hr />
+<div style="float: right; margin-left: 15px;">
+    <img src="img/group-law.jpg" alt="graph showing two different Elliptic Curves in the Real numbers, one continuous, and one with 2 separate sections" width="300px">
+</div>
+
+<h2 id="group-law-addition-of-points">Group Law: Addition of Points</h2>
+<p>Elliptic curves over <span class="arithmatex"><span class="MathJax_Preview"> \mathbb{R} </span><script type="math/tex"> \mathbb{R} </script></span> form a <strong>group</strong> under the operation of <strong>point addition</strong>.</p>
+<p>If <strong><span class="arithmatex"><span class="MathJax_Preview"> P </span><script type="math/tex"> P </script></span></strong> and <strong><span class="arithmatex"><span class="MathJax_Preview"> Q </span><script type="math/tex"> Q </script></span></strong> are points on the curve, their sum <strong><span class="arithmatex"><span class="MathJax_Preview"> P + Q </span><script type="math/tex"> P + Q </script></span></strong> is defined <strong>geometrically</strong> by:</p>
+<ul>
+<li>Drawing a <strong>line through <span class="arithmatex"><span class="MathJax_Preview"> P </span><script type="math/tex"> P </script></span> and <span class="arithmatex"><span class="MathJax_Preview"> Q </span><script type="math/tex"> Q </script></span></strong>.</li>
+<li>Finding its <strong>third intersection point</strong> with the curve.</li>
+<li>Reflecting that point over the <strong>x-axis</strong>.</li>
+</ul>
+<hr />
+<div style="float: left; margin-right: 15px;">
+    <img src="img/group-law-2.png" alt="graph showing two different Elliptic Curves in the Real numbers, one continuous, and one with 2 separate sections" width="300px">
+</div>
+
+<h3 id="special-cases-in-point-addition"><strong>Special Cases in Point Addition</strong></h3>
+<h4 id="when-p-q-p-q-point-doubling"><strong>When <span class="arithmatex"><span class="MathJax_Preview"> P = Q </span><script type="math/tex"> P = Q </script></span> (Point Doubling)</strong></h4>
+<p>If <strong><span class="arithmatex"><span class="MathJax_Preview"> P = Q </span><script type="math/tex"> P = Q </script></span></strong>, the line through <span class="arithmatex"><span class="MathJax_Preview"> P </span><script type="math/tex"> P </script></span> and <span class="arithmatex"><span class="MathJax_Preview"> Q </span><script type="math/tex"> Q </script></span> becomes a <strong>tangent line</strong> to the curve at <strong><span class="arithmatex"><span class="MathJax_Preview"> P </span><script type="math/tex"> P </script></span></strong>.
+$$ P + P = 2P = -R $$</p>
+<p>This means we compute the <strong>slope</strong> as:
+$$ m = \frac{x_P^2 + A}{2y_P} $$</p>
+<p><a href="acknowledgements-bibliography">(Washington, L. C., 2008, pp. 13-14, Section 2.2)</a></p>
+<div style="float: right; margin-left: 15px;">
+    <img src="img/group-law-3.png" alt="graph showing two different Elliptic Curves in the Real numbers, one continuous, and one with 2 separate sections" width="300px">
+</div>
+
+<h4 id="when-y-0-y-0"><strong>When <span class="arithmatex"><span class="MathJax_Preview"> y = 0 </span><script type="math/tex"> y = 0 </script></span></strong></h4>
+<p>If <span class="arithmatex"><span class="MathJax_Preview"> P </span><script type="math/tex"> P </script></span> lies on the x-axis (<span class="arithmatex"><span class="MathJax_Preview"> y = 0 </span><script type="math/tex"> y = 0 </script></span>), then:
+$$ 2P = \mathscr{O} $$</p>
+<p>where <strong><span class="arithmatex"><span class="MathJax_Preview"> \mathscr{O} </span><script type="math/tex"> \mathscr{O} </script></span></strong> is the <strong>point at infinity</strong>.</p>
+<h4 id="group-identity-the-point-at-infinity"><strong>Group Identity: The Point at Infinity</strong></h4>
+<p>Any vertical line <strong>intersects</strong> the curve at the <strong>point at infinity</strong> <span class="arithmatex"><span class="MathJax_Preview"> \mathscr{O} </span><script type="math/tex"> \mathscr{O} </script></span>.</p>
+<p>This point acts as the <strong>identity element</strong> for the group:
+$$ P + \mathscr{O} = P $$</p>
+<p>The <strong>additive inverse</strong> of a point <span class="arithmatex"><span class="MathJax_Preview"> (x, y) </span><script type="math/tex"> (x, y) </script></span> is:
+$$ (x, -y) $$</p>
+<p>which is simply the <strong>reflection over the x-axis</strong>.</p>
+<h3 id="the-three-point-property"><strong>The Three-Point Property</strong></h3>
+<p>It can be shown that any <strong>straight line</strong> passing through three points on the curve <span class="arithmatex"><span class="MathJax_Preview"> (P, Q, R) </span><script type="math/tex"> (P, Q, R) </script></span> represents:
+$$ P + Q + R = \mathscr{O} $$</p>
+<p>For this, and many related reasons, the "<strong>point at infinity</strong>" is taken to be the "<strong>additive neutral element</strong>" for the Group defined for Elliptic Curves (<a href="acknowledgements-bibliography">Washington, Section 2.3, pp. 18-20</a>).</p>
+<hr />
+<h2 id="applications">Applications</h2>
+<h3 id="cryptography"><strong>Cryptography</strong></h3>
+<p>Elliptic curves over <span class="arithmatex"><span class="MathJax_Preview"> \mathbb{R} </span><script type="math/tex"> \mathbb{R} </script></span> serve as <strong>simpler models</strong> for understanding more <strong>complex cryptographic schemes</strong> over finite fields and rings, including those used in <strong>Elliptic Curve Cryptography (ECC)</strong>.</p>
+<h3 id="theoretical-mathematics"><strong>Theoretical Mathematics</strong></h3>
+<p>Elliptic curves are studied for their properties in <strong>algebraic geometry</strong> and <strong>number theory</strong>.</p>
+<hr />
+<h2 id="challenges-considerations">Challenges &amp; Considerations</h2>
+<h3 id="visualization"><strong>Visualization</strong></h3>
+<p>Unlike elliptic curves over finite fields (used in cryptography), curves over <span class="arithmatex"><span class="MathJax_Preview"> \mathbb{R} </span><script type="math/tex"> \mathbb{R} </script></span> can be <strong>graphically represented</strong>, making visual learning <strong>more intuitive</strong>.</p>
+<h3 id="complexity-in-handling"><strong>Complexity in Handling</strong></h3>
+<p>While real-number elliptic curves are <strong>easier to visualize</strong>, they introduce complexities in ensuring <strong>mathematical rigor</strong>, especially concerning:</p>
+<ul>
+<li><strong>Limits</strong></li>
+<li><strong>Continuity</strong></li>
+<li><strong>Differentiability</strong></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>

@@ -12,6 +12,8 @@
         <link rel="prev" href="set-group-ring-field.html">
       
       
+        <link rel="next" href="elliptic-curves-real.html">
+      
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
@@ -42,6 +44,8 @@
     
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../assets/custom.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -441,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-real.md" class="md-nav__link">
+      <a href="elliptic-curves-real.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -880,32 +884,20 @@
 <hr />
 <p><img alt="abstract representation of cogs representing the discrete logarithm problem" src="img/log-cogs.png" /></p>
 <h2 id="definition">Definition</h2>
-<p>The <strong>Discrete Logarithm Problem</strong> involves finding an integer <span class="arithmatex"><span class="MathJax_Preview"> x </span><script type="math/tex"> x </script></span> given the equation:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview"> g^x \equiv h \mod p </div>
-<script type="math/tex; mode=display"> g^x \equiv h \mod p </script>
-</div>
+<p>The <strong>Discrete Logarithm Problem</strong> involves finding an integer <span class="arithmatex"><span class="MathJax_Preview"> x </span><script type="math/tex"> x </script></span> given the equation:
+$$ g^x \equiv h \mod p $$</p>
 <p>where:</p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview"> g </span><script type="math/tex"> g </script></span> is a known <a href="https://mathworld.wolfram.com/Base.html#:~:text=The%20word%20%22base%22%20in%20mathematics,in%20which%20logarithms%20are%20defined."><strong>base</strong></a></li>
 <li><span class="arithmatex"><span class="MathJax_Preview"> h </span><script type="math/tex"> h </script></span> is a known <strong>result</strong></li>
 <li><span class="arithmatex"><span class="MathJax_Preview"> p </span><script type="math/tex"> p </script></span> is a <a href="https://mathworld.wolfram.com/PrimeNumber.html#:~:text=A%20prime%20number%20(or%20prime,other%20than%201%20and%20itself.)"><strong>prime number</strong></a> (or the <a href="https://mathworld.wolfram.com/GroupOrder.html">order of the group</a> in more general settings)</li>
 </ul>
-<p>In reference to the idea of <a href="set-group-ring-field.html">operations on sets of elements</a>, the operation:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview"> g^h </div>
-<script type="math/tex; mode=display"> g^h </script>
-</div>
-<p>refers to applying the operation (in this case, multiplication <code>*</code>) <strong>h</strong> times. That is:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview"> g^h = g \times g \times g \times \dots \times g \quad \text{(h times)} </div>
-<script type="math/tex; mode=display"> g^h = g \times g \times g \times \dots \times g \quad \text{(h times)} </script>
-</div>
-<p>In the case of <strong>elliptic curves</strong>, we often refer to the same problem, in terms of the <code>+</code> operation:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview"> gh = h + h + h + \dots + h \quad \text{(h times)} </div>
-<script type="math/tex; mode=display"> gh = h + h + h + \dots + h \quad \text{(h times)} </script>
-</div>
+<p>In reference to the idea of <a href="set-group-ring-field.html">operations on sets of elements</a>, the operation:
+$$ g^h $$</p>
+<p>refers to applying the operation (in this case, multiplication <code>*</code>) <strong>h</strong> times. That is:
+$$ g^h = g \times g \times g \times \dots \times g \quad \text{(h times)} $$</p>
+<p>In the case of <strong>elliptic curves</strong>, we often refer to the same problem, in terms of the <code>+</code> operation:
+$$ gh = h + h + h + \dots + h \quad \text{(h times)} $$</p>
 <p>But the complexity of reversing the operation is still referred to as the <strong>Discrete Logarithm Problem</strong>.</p>
 <hr />
 <h2 id="context">Context</h2>
@@ -920,11 +912,8 @@
 <hr />
 <h2 id="difficulty">Difficulty</h2>
 <p>The <strong>"discrete"</strong> part of the name emphasizes that this problem is concerned with <strong>integers</strong>, unlike its continuous counterpart in real numbers.</p>
-<p>The complexity of finding <span class="arithmatex"><span class="MathJax_Preview"> k </span><script type="math/tex"> k </script></span> in the equation:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview"> kP \equiv Q </div>
-<script type="math/tex; mode=display"> kP \equiv Q </script>
-</div>
+<p>The complexity of finding <span class="arithmatex"><span class="MathJax_Preview"> k </span><script type="math/tex"> k </script></span> in the equation:
+$$ kP \equiv Q $$</p>
 <p>(for multiplication on an elliptic curve) is what makes it valuable for cryptography.</p>
 <p>There are <strong>no known efficient (polynomial time) algorithms</strong> for solving it in general cases, making it a <strong>computationally hard problem</strong>.</p>
 <p>For applications in cryptography, we seek groups where the <strong>Discrete Logarithm Problem</strong> is <strong>computationally difficult</strong> to solve.</p>

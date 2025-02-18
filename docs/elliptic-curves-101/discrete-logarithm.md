@@ -47,7 +47,7 @@ The **Discrete Logarithm Problem** is crucial in the security of [cryptographic 
 
 ## Difficulty
 
-The **"discrete"** part of the name emphasizes that this problem is concerned with **integers**, unlike its continuous counterpart in real numbers.
+The **"discrete"** part of the name emphasises that this problem is concerned with **integers**, unlike its continuous counterpart in real numbers.
 
 The complexity of finding \( k \) in the equation:
 $$ kP \equiv Q $$
