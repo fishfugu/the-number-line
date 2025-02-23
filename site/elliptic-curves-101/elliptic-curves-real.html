@@ -12,6 +12,8 @@
         <link rel="prev" href="discrete-logarithm.html">
       
       
+        <link rel="next" href="theorem-line-intersection.html">
+      
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
@@ -64,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#elliptic-curves-over-r" class="md-skip">
+        <a href="#elliptic-curves-over-mathbbr-mathbbr" class="md-skip">
           Skip to content
         </a>
       
@@ -452,9 +454,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#when-p-q-p-q-point-doubling" class="md-nav__link">
+  <a href="#when-p-q-p-q" class="md-nav__link">
     <span class="md-ellipsis">
-      When P = Q P = Q (Point Doubling)
+      When P = Q P = Q
     </span>
   </a>
   
@@ -469,26 +471,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#group-identity-the-point-at-infinity" class="md-nav__link">
-    <span class="md-ellipsis">
-      Group Identity: The Point at Infinity
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-three-point-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Three-Point Property
-    </span>
-  </a>
   
 </li>
         
@@ -541,9 +525,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#visualization" class="md-nav__link">
+  <a href="#visualisation" class="md-nav__link">
     <span class="md-ellipsis">
-      Visualization
+      Visualisation
     </span>
   </a>
   
@@ -579,7 +563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="theorem-line-intersection.md" class="md-nav__link">
+      <a href="theorem-line-intersection.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -601,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="additive-inverse.md" class="md-nav__link">
+      <a href="additive-inverse.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -623,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="point-addition.md" class="md-nav__link">
+      <a href="point-addition.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="acknowledgements.md" class="md-nav__link">
+      <a href="acknowledgements-bibliography.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -978,9 +962,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#when-p-q-p-q-point-doubling" class="md-nav__link">
+  <a href="#when-p-q-p-q" class="md-nav__link">
     <span class="md-ellipsis">
-      When P = Q P = Q (Point Doubling)
+      When P = Q P = Q
     </span>
   </a>
   
@@ -995,26 +979,8 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#group-identity-the-point-at-infinity" class="md-nav__link">
-    <span class="md-ellipsis">
-      Group Identity: The Point at Infinity
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-three-point-property" class="md-nav__link">
-    <span class="md-ellipsis">
-      The Three-Point Property
-    </span>
-  </a>
   
 </li>
         
@@ -1067,9 +1033,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#visualization" class="md-nav__link">
+  <a href="#visualisation" class="md-nav__link">
     <span class="md-ellipsis">
-      Visualization
+      Visualisation
     </span>
   </a>
   
@@ -1105,7 +1071,7 @@
 
 
 
-<h1 id="elliptic-curves-over-r">Elliptic Curves over ℝ</h1>
+<h1 id="elliptic-curves-over-mathbbr-mathbbr">Elliptic Curves over <span class="arithmatex"><span class="MathJax_Preview"> \mathbb{R} </span><script type="math/tex"> \mathbb{R} </script></span></h1>
 <p><a href="https://mathworld.wolfram.com/EllipticCurve.html#:~:text=Formally%2C%20an%20elliptic%20curve%20over,%2C%20or%20a%20finite%20field.">Elliptic curves</a> have applications in various mathematical fields, including <a href="https://mathworld.wolfram.com/NumberTheory.html#:~:text=Number%20theory%20is%20a%20vast,the%20properties%20of%20whole%20numbers."><strong>number theory</strong></a> and <a href="https://mathworld.wolfram.com/Cryptography.html"><strong>cryptography</strong></a>.</p>
 <hr />
 <div style="float: left; margin-right: 15px;">
@@ -1123,7 +1089,7 @@ $$ 4A^3 + 27B^2 \neq 0 $$</p>
 <p>In the form:
 $$ y^2 = x^3 + Ax + B $$</p>
 <p>an elliptic curve is said to be in the <strong>Weierstrass Equation form</strong>.</p>
-<p>There are <a href="https://mathworld.wolfram.com/EllipticCurve.html">more general equations that define elliptic curves</a> over <span class="arithmatex"><span class="MathJax_Preview"> \mathbb{R} </span><script type="math/tex"> \mathbb{R} </script></span> (<a href="acknowledgements-bibliography.md">Washington, L. C., 2008, pp. 35-42, Section 2.5</a>). However, elliptic curves can be <a href="https://crypto.stanford.edu/pbc/notes/elliptic/weier.html"><strong>converted</strong> into the Weierstrass Equation form</a> when defined across fields with <a href="https://mathworld.wolfram.com/EllipticCurve.html">a characteristic other than <strong>2 or 3</strong></a>.</p>
+<p>There are <a href="https://mathworld.wolfram.com/EllipticCurve.html">more general equations that define elliptic curves</a> over <span class="arithmatex"><span class="MathJax_Preview"> \mathbb{R} </span><script type="math/tex"> \mathbb{R} </script></span> (<a href="acknowledgements-bibliography.html">Washington, L. C., 2008, pp. 35-42, Section 2.5</a>). However, elliptic curves can be <a href="https://crypto.stanford.edu/pbc/notes/elliptic/weier.html"><strong>converted</strong> into the Weierstrass Equation form</a> when defined across fields with <a href="https://mathworld.wolfram.com/EllipticCurve.html">a characteristic other than <strong>2 or 3</strong></a>.</p>
 <hr />
 <h2 id="animation-of-ecs-in-the-weierstrass-form">Animation of ECs in the Weierstrass form</h2>
 <p>See below, an animation of different elliptic curves in the Weierstrass Form, for varying values of the coefficients A and B (in the equation <span class="arithmatex"><span class="MathJax_Preview"> y^2 = x^3 + Ax + B </span><script type="math/tex"> y^2 = x^3 + Ax + B </script></span>):</p>
@@ -1182,43 +1148,38 @@ If <span class="arithmatex"><span class="MathJax_Preview"> (x, y) </span><script
 </div>
 
 <h3 id="special-cases-in-point-addition"><strong>Special Cases in Point Addition</strong></h3>
-<h4 id="when-p-q-p-q-point-doubling"><strong>When <span class="arithmatex"><span class="MathJax_Preview"> P = Q </span><script type="math/tex"> P = Q </script></span> (Point Doubling)</strong></h4>
-<p>If <strong><span class="arithmatex"><span class="MathJax_Preview"> P = Q </span><script type="math/tex"> P = Q </script></span></strong>, the line through <span class="arithmatex"><span class="MathJax_Preview"> P </span><script type="math/tex"> P </script></span> and <span class="arithmatex"><span class="MathJax_Preview"> Q </span><script type="math/tex"> Q </script></span> becomes a <strong>tangent line</strong> to the curve at <strong><span class="arithmatex"><span class="MathJax_Preview"> P </span><script type="math/tex"> P </script></span></strong>.
-$$ P + P = 2P = -R $$</p>
-<p>This means we compute the <strong>slope</strong> as:
-$$ m = \frac{x_P^2 + A}{2y_P} $$</p>
-<p><a href="acknowledgements-bibliography">(Washington, L. C., 2008, pp. 13-14, Section 2.2)</a></p>
-<div style="float: right; margin-left: 15px;">
-    <img src="img/group-law-3.png" alt="graph showing two different Elliptic Curves in the Real numbers, one continuous, and one with 2 separate sections" width="300px">
-</div>
-
-<h4 id="when-y-0-y-0"><strong>When <span class="arithmatex"><span class="MathJax_Preview"> y = 0 </span><script type="math/tex"> y = 0 </script></span></strong></h4>
-<p>If <span class="arithmatex"><span class="MathJax_Preview"> P </span><script type="math/tex"> P </script></span> lies on the x-axis (<span class="arithmatex"><span class="MathJax_Preview"> y = 0 </span><script type="math/tex"> y = 0 </script></span>), then:
-$$ 2P = \mathscr{O} $$</p>
-<p>where <strong><span class="arithmatex"><span class="MathJax_Preview"> \mathscr{O} </span><script type="math/tex"> \mathscr{O} </script></span></strong> is the <strong>point at infinity</strong>.</p>
-<h4 id="group-identity-the-point-at-infinity"><strong>Group Identity: The Point at Infinity</strong></h4>
-<p>Any vertical line <strong>intersects</strong> the curve at the <strong>point at infinity</strong> <span class="arithmatex"><span class="MathJax_Preview"> \mathscr{O} </span><script type="math/tex"> \mathscr{O} </script></span>.</p>
-<p>This point acts as the <strong>identity element</strong> for the group:
-$$ P + \mathscr{O} = P $$</p>
-<p>The <strong>additive inverse</strong> of a point <span class="arithmatex"><span class="MathJax_Preview"> (x, y) </span><script type="math/tex"> (x, y) </script></span> is:
-$$ (x, -y) $$</p>
-<p>which is simply the <strong>reflection over the x-axis</strong>.</p>
-<h3 id="the-three-point-property"><strong>The Three-Point Property</strong></h3>
-<p>It can be shown that any <strong>straight line</strong> passing through three points on the curve <span class="arithmatex"><span class="MathJax_Preview"> (P, Q, R) </span><script type="math/tex"> (P, Q, R) </script></span> represents:
-$$ P + Q + R = \mathscr{O} $$</p>
-<p>For this, and many related reasons, the "<strong>point at infinity</strong>" is taken to be the "<strong>additive neutral element</strong>" for the Group defined for Elliptic Curves (<a href="acknowledgements-bibliography">Washington, Section 2.3, pp. 18-20</a>).</p>
+<h4 id="when-p-q-p-q">When <span class="arithmatex"><span class="MathJax_Preview"> P = Q </span><script type="math/tex"> P = Q </script></span></h4>
+<p>When <span class="arithmatex"><span class="MathJax_Preview"> P = Q </span><script type="math/tex"> P = Q </script></span> (i.e the points you are adding together are equal), as described above under "Group Law":
+$$ P + Q = 2P $$</p>
+<p>so the equation for the gradient:
+$$ m = \frac{ y_Q - y_P }{ x_Q - x_P } $$</p>
+<p>no longer makes any sense - because:
+$$ x_Q - x_P = 0 $$</p>
+<p>and therefore, the denominator would be 0.</p>
+<p>So we need to find the slope of E:
+$$ m = \frac{ x_P^2 + a }{ 2 y_P } $$</p>
+<p>(<a href="acknowledgements-bibliography.html">Washington, L. C., 2008, pp13-14, Section 2.2</a>)</p>
+<p>The concept of finding the slope of an Elliptic Curve will be further explored in <a href="slope-of-elliptic-curve.md">the section on "Formal Derivatives"</a>. For now, we will simply say that we use the derivative for finding the slope at a point on the curve.</p>
+<h4 id="when-y-0-y-0">When <span class="arithmatex"><span class="MathJax_Preview"> y = 0 </span><script type="math/tex"> y = 0 </script></span></h4>
+<p>That is: the tangent to the curve E is a vertical line.</p>
+<p>So:
+$$ 2P = \text{"the point at infinity"} $$</p>
+<p>It can also be shown, related to the definition of addition for elliptic curves, that any straight line that passes through 3 point on the curve (<span class="arithmatex"><span class="MathJax_Preview"> P </span><script type="math/tex"> P </script></span>, <span class="arithmatex"><span class="MathJax_Preview"> Q </span><script type="math/tex"> Q </script></span> and <span class="arithmatex"><span class="MathJax_Preview"> R </span><script type="math/tex"> R </script></span> ) represents the fact that:
+$$ P + Q + R = 0 $$</p>
+<p>For this, and many related reasons, the "point at infinity" is taken to be the "additive neutral element" for the Group defined for Elliptic Curves (<a href="acknowledgements-bibliography.html">Washington, Section 2.3, pp18-20</a>).</p>
+<p>NOTE: When defined in <span class="arithmatex"><span class="MathJax_Preview"> \mathbb{R} </span><script type="math/tex"> \mathbb{R} </script></span>, it can easily be shown that, if the tangent line to the curve <span class="arithmatex"><span class="MathJax_Preview"> E </span><script type="math/tex"> E </script></span> is anything other than vertical, <a href="line-connecting-p-q-intersect-third-point.md">it will intersect with E (in the Affine plane), at another point</a>.</p>
 <hr />
 <h2 id="applications">Applications</h2>
-<h3 id="cryptography"><strong>Cryptography</strong></h3>
+<h3 id="cryptography"><strong><a href="https://en.wikipedia.org/wiki/Cryptography">Cryptography</a></strong></h3>
 <p>Elliptic curves over <span class="arithmatex"><span class="MathJax_Preview"> \mathbb{R} </span><script type="math/tex"> \mathbb{R} </script></span> serve as <strong>simpler models</strong> for understanding more <strong>complex cryptographic schemes</strong> over finite fields and rings, including those used in <strong>Elliptic Curve Cryptography (ECC)</strong>.</p>
-<h3 id="theoretical-mathematics"><strong>Theoretical Mathematics</strong></h3>
+<h3 id="theoretical-mathematics"><strong><a href="https://en.wikipedia.org/wiki/Algebraic_geometry">Theoretical Mathematics</a></strong></h3>
 <p>Elliptic curves are studied for their properties in <strong>algebraic geometry</strong> and <strong>number theory</strong>.</p>
 <hr />
 <h2 id="challenges-considerations">Challenges &amp; Considerations</h2>
-<h3 id="visualization"><strong>Visualization</strong></h3>
+<h3 id="visualisation"><strong><a href="https://mathworld.wolfram.com/EllipticCurve.html#:~:text=Informally%2C%20an%20elliptic%20curve%20is,form%20of%20an%20elliptic%20curve.">Visualisation</a></strong></h3>
 <p>Unlike elliptic curves over finite fields (used in cryptography), curves over <span class="arithmatex"><span class="MathJax_Preview"> \mathbb{R} </span><script type="math/tex"> \mathbb{R} </script></span> can be <strong>graphically represented</strong>, making visual learning <strong>more intuitive</strong>.</p>
-<h3 id="complexity-in-handling"><strong>Complexity in Handling</strong></h3>
-<p>While real-number elliptic curves are <strong>easier to visualize</strong>, they introduce complexities in ensuring <strong>mathematical rigor</strong>, especially concerning:</p>
+<h3 id="complexity-in-handling"><strong><a href="https://math.libretexts.org/Under_Construction/Purgatory/Book%3A_Active_Calculus_(Boelkins_et_al.)/01%3A_Understanding_the_Derivative/1.07%3A_Limits_Continuity_and_Differentiability">Complexity in Handling</a></strong></h3>
+<p>While real-number elliptic curves are <strong>easier to visualise</strong>, they introduce complexities in ensuring <strong>mathematical rigor</strong>, especially concerning:</p>
 <ul>
 <li><strong>Limits</strong></li>
 <li><strong>Continuity</strong></li>
