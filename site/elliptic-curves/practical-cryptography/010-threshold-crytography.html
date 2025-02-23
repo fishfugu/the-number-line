@@ -1,0 +1,1347 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Threshold Cryptography: A Trustless Approach to Collective Agreement - The Number Line</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../assets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#threshold-cryptography-a-trustless-approach-to-collective-agreement" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="The Number Line" class="md-header__button md-logo" aria-label="The Number Line" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Number Line
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Threshold Cryptography: A Trustless Approach to Collective Agreement
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../elliptic-curves-101/010-ec-101-introduction.html" class="md-tabs__link">
+          
+  
+  Elliptic Curves
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="The Number Line" class="md-nav__button md-logo" aria-label="The Number Line" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The Number Line
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Elliptic Curves
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Elliptic Curves
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Elliptic Curves 101
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Elliptic Curves 101
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/010-ec-101-introduction.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/020-set-group-ring-field.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is a Set, a Group, a Ring, and a Field?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/030-discrete-logarithm.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Discrete Logarithm Problem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/040-elliptic-curves-real.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elliptic Curves over \( \mathbb{R} \)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/050-theorem-line-intersection.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Theorem / Proof, A line connecting P and Q always intersects a third point
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/060-additive-inverse.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Additive Inverse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/070-point-addition.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Points, Doubling Points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/weierstrass-general.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expanding from Weierstrass To General Form
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/associativity.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ Associativity ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/projective-plane.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ The Projective Plane ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/homogeneous-equations.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ Homogeneous Equations ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/elliptic-curves-finite-field.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ Elliptic Curves In a Finite Field ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/modular-multiplicative-inverse.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ The Modular Multiplicative Inverse ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/slope-formal-derivative.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ The Slope of an Elliptic Curve (Formal Derivative) ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/arithmetic-finite-field.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ Arithmetic In A Finite Field ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/doubling-points-finite-field.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ Doubling Points in a Finite Field ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elliptic-curves-101/090-acknowledgements-bibliography.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ Acknowledgements and Bibliography ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Practical Cryptography
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Practical Cryptography
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="010-threshold-cryptography.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Threshold Crytography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="020-mathematics-of-threshold.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Mathematics of Threshold Cryptography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#potential-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Potential Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exploring-possible-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exploring Possible Approaches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exploring Possible Approaches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-shamirs-secret-sharing-sss-public-key-cryptography" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Shamir’s Secret Sharing (SSS) + Public Key Cryptography
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-threshold-rsa-threshold-decryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Threshold RSA / Threshold Decryption
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-threshold-ecdsa-schnorr-signatures" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Threshold ECDSA / Schnorr Signatures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-multi-party-computation-mpc-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Multi-Party Computation (MPC) Approaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-between-threshold-ecdsa-and-threshold-schnorr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing Between Threshold ECDSA and Threshold Schnorr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-distributed-key-generation-dkg-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Distributed Key Generation (DKG) Matters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Distributed Key Generation (DKG) Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-avoid-centralised-key-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Avoid Centralised Key Generation?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-distributed-key-generation-dkg" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Distributed Key Generation (DKG)?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-dkg-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Does DKG Work?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-cryptosystems-support-dkg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Which Cryptosystems Support DKG?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-threshold-signing-works-without-leaking-private-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Threshold Signing Works Without Leaking Private Keys
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How Threshold Signing Works Without Leaking Private Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-insight-partial-signatures-reveal-nothing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Insight: Partial Signatures Reveal Nothing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-is-this-secure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why is This Secure?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-many-participants-can-be-in-a-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Many Participants Can Be in a Pool?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-agreement-works-in-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Agreement Works in Practice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-sends-what-to-whom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who Sends What to Whom?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references-further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      References &amp; Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading-on-threshold-crytography" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading on Threshold Crytography
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Further Reading on Threshold Crytography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#practical-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Application
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="threshold-cryptography-a-trustless-approach-to-collective-agreement">Threshold Cryptography: A Trustless Approach to Collective Agreement</h1>
+<h2 id="overview">Overview</h2>
+<p>Here we will explore the concept of using <strong><a href="https://en.wikipedia.org/wiki/Public-key_cryptography">public key cryptography</a></strong> to allow a group of systems or people to <strong><a href="https://www.sciencedirect.com/topics/computer-science/collective-agreement">collectively agree</a></strong> to unlock or decrypt something. Let's assume the core requirements of such a system are:</p>
+<ul>
+<li>A <strong><a href="https://blog.pantherprotocol.io/threshold-cryptography-an-overview/#:~:text=After%20setting%20the%20number%20of,at%20least%20two%20more%20people.">minimum number of participants</a></strong> (t-of-n) must agree to unlock access.</li>
+<li>No participant ever reveals their <strong><a href="https://www.techtarget.com/searchsecurity/definition/private-key">private key</a></strong> to another party.</li>
+<li>The system must be <strong><a href="https://medium.com/@Ukeziebenezer/unlocking-societal-benefits-the-shift-from-trust-to-trustless-in-finance-505e3309d524#:~:text=Trustless%20systems%20aim%20to%20reduce,and%20transactions%20directly%20between%20parties.">trustless</a></strong>, meaning no single party should be able to compromise security.</li>
+</ul>
+<p>Now, let's break down some of the various cryptographic techniques that can achieve this goal, their applications, trade-offs, and practical implementations.</p>
+<hr />
+<h2 id="potential-use-cases"><strong>Potential Use Cases</strong></h2>
+<p>There are a range of real-world scenarios in which such a system is beneficial, including:</p>
+<ul>
+<li><strong><a href="https://research.csiro.au/blockchainpatterns/general-patterns/security-patterns/multiple-authorization/">Banking and Investment Accounts</a>:</strong> Multi-signature authorisation for financial transactions where multiple stakeholders must approve access to funds.</li>
+<li><strong><a href="https://docs.rubrik.com/en-us/saas/qauth/quorum_authorization.html">Data Recovery &amp; Secure Storage</a>:</strong> Protecting sensitive data so that a quorum of authorised parties must agree before it can be accessed.</li>
+<li><strong><a href="https://eprints.qut.edu.au/250712/">Secure Voting &amp; Decision-Making Systems</a>:</strong> Cryptographically enforcing collective approval processes in decentralised systems.</li>
+<li><strong><a href="https://www.investopedia.com/tech/what-dao/">Blockchain &amp; Smart Contracts</a>:</strong> Multi-party authorisation of transactions or governance decisions in decentralised networks.</li>
+</ul>
+<hr />
+<h2 id="exploring-possible-approaches"><strong>Exploring Possible Approaches</strong></h2>
+<p>We initially investigated several cryptographic techniques to solve this problem:</p>
+<h3 id="1-shamirs-secret-sharing-sss-public-key-cryptography"><strong>1. <a href="https://en.wikipedia.org/wiki/Shamir%27s_secret_sharing#:~:text=SSS%20is%20used%20to%20secure,is%20needed%2C%20called%20the%20threshold.">Shamir’s Secret Sharing (SSS) + Public Key Cryptography</a></strong></h3>
+<ul>
+<li><strong>General Idea:</strong> The private key is split into multiple shares, and a quorum of shares is needed to reconstruct the key.</li>
+<li><strong>Used In Practice For:</strong> Secure key backup and recovery, threshold decryption.</li>
+<li><strong>Why It's Not Appropriate For Our Use-Case:</strong> Once the secret is reconstructed, secrecy is lost—making it unsuitable for a fully trustless system.</li>
+</ul>
+<h3 id="2-threshold-rsa-threshold-decryption"><strong>2. <a href="https://www.cs.ox.ac.uk/files/269/Thesis.pdf">Threshold RSA / Threshold Decryption</a></strong></h3>
+<ul>
+<li><strong>General Idea:</strong> The RSA private key is split across multiple participants who collaboratively perform decryption without reconstructing the full key.</li>
+<li><strong>Used In Practice For:</strong> Secure messaging, threshold decryption.</li>
+<li><strong>Why It's Not Appropriate For Our Use-Case:</strong> Not all implementations support <strong><a href="https://scryptplatform.medium.com/distributed-key-generation-3ef41ced01ed">Distributed Key Generation (DKG)</a></strong>, meaning the private key might exist in full at some point.</li>
+</ul>
+<h3 id="3-threshold-ecdsa-schnorr-signatures"><strong>3. <a href="https://internetcomputer.org/docs/current/developer-docs/smart-contracts/signatures/t-ecdsa/">Threshold ECDSA</a> / <a href="https://internetcomputer.org/docs/current/developer-docs/smart-contracts/signatures/t-schnorr#:~:text=Schnorr%20signatures%20are%20a%20type,be%20used%20on%20the%20network.">Schnorr Signatures</a></strong></h3>
+<ul>
+<li><strong>General Idea:</strong> Multiple participants collectively generate a valid <strong><a href="https://www.techtarget.com/searchsecurity/definition/digital-signature">cryptographic signature</a></strong> without reconstructing the <a href="https://www.preveil.com/blog/public-and-private-key/">private key</a>.</li>
+<li><strong>Used In Practice For:</strong> Multi-signature wallets, secure transaction approvals.</li>
+<li><strong>Why We Chose this for our Use-Case:</strong> Supports <strong><a href="https://docs.skale.network/technology/dkg-bls">DKG</a></strong>, making it fully <a href="https://www.morpher.com/blog/benefits-of-a-trustless-blockchain">trustless</a>, and works well for <a href="https://www.sciencedirect.com/science/article/pii/S2772918423000036">access control mechanisms</a>.</li>
+</ul>
+<h3 id="4-multi-party-computation-mpc-approaches"><strong>4. <a href="https://www.fireblocks.com/what-is-mpc/#:~:text=In%20a%20general%20sense%2C%20MPC,any%20otherwise%20related%20secret%20information">Multi-Party Computation (MPC) Approaches</a></strong></h3>
+<ul>
+<li><strong>General Idea:</strong> A group of participants jointly computes a function without revealing individual inputs.</li>
+<li><strong>Used In Practice For:</strong> Privacy-preserving computations, advanced cryptographic protocols.</li>
+<li><strong>Why We Didn’t Focus on this for our Use-Case:</strong> High computational complexity and performance overhead.</li>
+</ul>
+<hr />
+<h2 id="choosing-between-threshold-ecdsa-and-threshold-schnorr"><strong>Choosing Between Threshold ECDSA and Threshold Schnorr</strong></h2>
+<p>Both Threshold ECDSA and Threshold Schnorr allow t-of-n participants to collectively sign a message. The main differences are:</p>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Can Unlock Access?</th>
+<th>Keeps Keys Private?</th>
+<th>Works Without Trusted Third Party?</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Threshold ECDSA</strong></td>
+<td>✅ Yes</td>
+<td>✅ Yes</td>
+<td>✅ Yes</td>
+<td>Cryptographic signing &amp; access control</td>
+</tr>
+<tr>
+<td><strong>Threshold Schnorr</strong></td>
+<td>✅ Yes</td>
+<td>✅ Yes</td>
+<td>✅ Yes</td>
+<td>More efficient signing in multi-party settings</td>
+</tr>
+</tbody>
+</table>
+<p>Threshold Schnorr (e.g., <strong>FROST</strong>) is more efficient and flexible than ECDSA, which is why we focused on it for this use-case.</p>
+<hr />
+<h2 id="why-distributed-key-generation-dkg-matters"><strong>Why <a href="https://uwspace.uwaterloo.ca/items/05ecf041-a600-4ea1-8f76-c8a8cb3f14f7">Distributed Key Generation (DKG)</a> Matters</strong></h2>
+<h3 id="why-avoid-centralised-key-generation"><strong>Why Avoid <a href="https://www.researchgate.net/publication/339545481_A_Centralized_Key_Management_Scheme_Based_on_McEliece_PKC_for_Space_Network">Centralised Key Generation</a>?</strong></h3>
+<p>A major security risk exists if a full private key is ever generated before being "split" into shares. This would allow a single party to keep a copy of the key, breaking the trustless property.</p>
+<h3 id="what-is-distributed-key-generation-dkg"><strong>What is <a href="https://www.usenix.org/conference/usenixsecurity23/presentation/das">Distributed Key Generation (DKG)</a>?</strong></h3>
+<p>DKG allows a group to <strong><a href="https://eprint.iacr.org/2019/114.pdf">collectively generate a public-private keypair</a></strong> without any single party ever having access to the full private key. The key is never assembled in one place, preventing compromise.</p>
+<h3 id="how-does-dkg-work"><strong><a href="https://en.wikipedia.org/wiki/Distributed_key_generation#:~:text=Distributed%20key%20generation%20(DKG)%20is,rely%20on%20Trusted%20Third%20Parties.">How Does DKG Work?</a></strong></h3>
+<ol>
+<li><strong>Each participant generates a private share</strong> independently.</li>
+<li><strong>Participants exchange cryptographic commitments</strong> to verify correctness.</li>
+<li><strong>The collective public key is computed</strong> from these shares, ensuring trustlessness.</li>
+</ol>
+<p>Also see: <a href="Asynchronous Distributed Private-Key Generators for Identity-Based Cryptography">https://eprint.iacr.org/2009/355.pdf</a></p>
+<h3 id="which-cryptosystems-support-dkg"><strong>Which Cryptosystems Support DKG?</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Cryptosystem</th>
+<th>Supports DKG?</th>
+<th>Key Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Threshold Schnorr (FROST)</strong></td>
+<td>✅ Yes</td>
+<td>Signing</td>
+</tr>
+<tr>
+<td><strong>Threshold ECDSA (GG20)</strong></td>
+<td>✅ Yes</td>
+<td>Signing</td>
+</tr>
+<tr>
+<td><strong>Threshold RSA</strong></td>
+<td>⚠️ Sometimes</td>
+<td>Decryption</td>
+</tr>
+<tr>
+<td><strong>Paillier Cryptosystem</strong></td>
+<td>⚠️ Sometimes</td>
+<td>Decryption</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="how-threshold-signing-works-without-leaking-private-keys"><strong>How Threshold Signing Works Without Leaking Private Keys</strong></h2>
+<h3 id="key-insight-partial-signatures-reveal-nothing"><strong>Key Insight: Partial Signatures Reveal Nothing</strong></h3>
+<p>Each participant computes a <strong><a href="https://eprint.iacr.org/2009/336.pdf">partial signature</a></strong> without <a href="https://www.researchgate.net/publication/2422330_Exposing_an_RSA_Private_Key_Given_a_Small_Fraction_of_its_Bits">exposing their private key share</a>. This works because:</p>
+<ol>
+<li><strong>Each signer picks a fresh random nonce</strong> $ k_i $ per request.</li>
+<li><strong>They commit to their nonce</strong>: $ R_i = g^{k_i} $.</li>
+<li><strong>They compute their partial signature</strong>:</li>
+</ol>
+<p>$$ S_i = k_i + c \cdot x_i $$</p>
+<p>where $ c $ is a challenge computed from the message.</p>
+<ol>
+<li><strong>Aggregation ensures security</strong>:</li>
+</ol>
+<p>$$ S = S_1 + S_2 + ... + S_t $$</p>
+<p>The final signature is valid, but the private key remains unknown.</p>
+<h3 id="why-is-this-secure"><strong>Why is This Secure?</strong></h3>
+<ul>
+<li>The function $ S_i = f(x_i) $ is <strong><a href="https://en.wikipedia.org/wiki/One-way_function">one-way</a></strong> and non-invertible.</li>
+<li>Even if multiple signatures are observed, $ x_i $ <strong>cannot</strong> be derived.</li>
+<li>The aggregated signature is indistinguishable from a Schnorr signature created from a single private key input.</li>
+</ul>
+<hr />
+<h2 id="practical-considerations"><strong>Practical Considerations</strong></h2>
+<h3 id="how-many-participants-can-be-in-a-pool"><strong>How Many Participants Can Be in a Pool?</strong></h3>
+<p>There is no strict limit, but communication overhead grows with $ n $. Common useage examples are:</p>
+<ul>
+<li><strong>$ t = 3, n = 5 $</strong> (small teams)</li>
+<li><strong>$ t = 10, n = 100 $</strong> (large governance models)</li>
+</ul>
+<p>but, theoretically, pools of participants and the number of people required to atisfy a request for partial signatures are only limited by considerations of performance.</p>
+<h3 id="how-agreement-works-in-practice"><strong>How Agreement Works in Practice</strong></h3>
+<ul>
+<li>Participants <strong>sign in any order</strong>, asynchronously.</li>
+<li>Each signer <strong>sends only their partial signature</strong> (which, importantly, still maintains the secrecy of the private key used)</li>
+<li>The final signature is computed once $ t $ shares are collected.</li>
+</ul>
+<h3 id="who-sends-what-to-whom"><strong>Who Sends What to Whom?</strong></h3>
+<ul>
+<li>A requester broadcasts <strong>a signing request</strong>.</li>
+<li>Each signer computes their <strong>partial signature</strong> (if they wish too sign the request as "correct" or "passed")</li>
+<li>Partial signatures are <strong>aggregated into a valid Schnorr signature</strong>.</li>
+<li>The system <strong>verifies</strong> the final signature before unlocking access.</li>
+</ul>
+<hr />
+<h2 id="references-further-reading"><strong>References &amp; Further Reading</strong></h2>
+<ul>
+<li><a href="https://eprint.iacr.org/2020/852">FROST: Flexible Round-Optimized Schnorr Threshold Signatures</a></li>
+<li><a href="https://eprint.iacr.org/2020/540">GG20: Gennaro-Goldfeder Threshold ECDSA</a></li>
+<li><a href="https://github.com/binance-chain/tss-lib">Binance’s tss-lib (Threshold Cryptography for Blockchain)</a></li>
+</ul>
+<h2 id="further-reading-on-threshold-crytography">Further Reading on Threshold Crytography</h2>
+<h3 id="practical-application">Practical Application</h3>
+<ul>
+<li>
+<p><a href="https://arxiv.org/html/2502.03247v1#S3"><em>Thetacrypt: A Distributed Service for Threshold Cryptography</em></a>: This paper introduces Thetacrypt, a library designed to integrate various threshold schemes into a unified codebase. It offers a practical approach to building distributed systems that utilise threshold cryptography.</p>
+</li>
+<li>
+<p>Also see: <a href="https://github.com/cryptobern/thetacrypt">the GitHub repo for Thetacrypt - Threshold Cryptography Distributed Service in Rust</a></p>
+</li>
+<li>
+<p><a href="https://link.springer.com/referenceworkentry/10.1007/978-1-4419-5906-5_330?utm_source=chatgpt.com"><em>Threshold Cryptography</em></a>: This entry in the Encyclopedia of Cryptography and Security offers an overview of threshold cryptography, discussing its motivation, fundamental problems, and applications.</p>
+</li>
+<li>
+<p><a href="https://www.iacr.org/archive/crypto2018/10993213/10993213.pdf?utm_source=chatgpt.com"><em>Threshold Cryptosystems from Threshold Fully Homomorphic Encryption</em></a>: This paper explores threshold cryptosystems with non-interactive decentralized key generation, providing insights into advanced threshold encryption schemes.</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>
