@@ -11,16 +11,16 @@
       
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
     
     
       
-        <title>Introduction to Elliptic Curves - The Number Line</title>
+        <title>Weather - The Number Line</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.d7758b05.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
       
       
 
@@ -41,9 +41,9 @@
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
     
-      <link rel="stylesheet" href="assets/custom.css">
+      <link rel="stylesheet" href="../../assets/custom.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -61,11 +61,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#introduction-to-elliptic-curves" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -76,9 +71,9 @@
 
   
 
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="The Number Line" class="md-header__button md-logo" aria-label="The Number Line" data-md-component="logo">
+    <a href="../../index.html" title="The Number Line" class="md-header__button md-logo" aria-label="The Number Line" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -98,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction to Elliptic Curves
+              Weather
             
           </span>
         </div>
@@ -150,13 +145,66 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../elliptic-curves/elliptic-curves-101/010-ec-101-introduction.html" class="md-tabs__link">
+          
+  
+  Elliptic Curves
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -170,10 +218,12 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="The Number Line" class="md-nav__button md-logo" aria-label="The Number Line" data-md-component="logo">
+    <a href="../../index.html" title="The Number Line" class="md-nav__button md-logo" aria-label="The Number Line" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -191,7 +241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="index.html" class="md-nav__link">
+      <a href="../../index.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -214,6 +264,9 @@
     
     
     
+      
+      
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -226,7 +279,7 @@
             
   
   <span class="md-ellipsis">
-    Elliptic Curves 101
+    Elliptic Curves
     
   </span>
   
@@ -236,6 +289,45 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Elliptic Curves
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Elliptic Curves 101
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Elliptic Curves 101
           </label>
@@ -248,7 +340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/index.html" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/010-ec-101-introduction.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -270,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/set-group-ring-field.html" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/020-set-group-ring-field.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -292,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/discrete-logarithm.html" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/030-discrete-logarithm.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -314,11 +406,11 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/elliptic-curves-real.html" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/040-elliptic-curves-real.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Elliptic Curves over ℝ
+    Elliptic Curves over \( \mathbb{R} \)
     
   </span>
   
@@ -336,7 +428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/theorem-line-intersection.html" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/050-theorem-line-intersection.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -358,7 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/additive-inverse.html" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/060-additive-inverse.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -380,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/point-addition.html" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/070-point-addition.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -402,7 +494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/weierstrass-general.md" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/weierstrass-general.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -424,11 +516,11 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/associativity.md" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/associativity.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Associativity
+    ~~ Associativity ~~
     
   </span>
   
@@ -446,11 +538,11 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/projective-plane.md" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/projective-plane.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    The Projective Plane
+    ~~ The Projective Plane ~~
     
   </span>
   
@@ -468,11 +560,11 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/homogeneous-equations.md" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/homogeneous-equations.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Homogeneous Equations
+    ~~ Homogeneous Equations ~~
     
   </span>
   
@@ -490,11 +582,11 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/elliptic-curves-finite-field.md" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/elliptic-curves-finite-field.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Elliptic Curves In a Finite Field
+    ~~ Elliptic Curves In a Finite Field ~~
     
   </span>
   
@@ -512,11 +604,11 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/modular-multiplicative-inverse.md" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/modular-multiplicative-inverse.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    The Modular Multiplicative Inverse
+    ~~ The Modular Multiplicative Inverse ~~
     
   </span>
   
@@ -534,11 +626,11 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/slope-formal-derivative.md" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/slope-formal-derivative.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    The Slope of an Elliptic Curve (Formal Derivative)
+    ~~ The Slope of an Elliptic Curve (Formal Derivative) ~~
     
   </span>
   
@@ -556,11 +648,11 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/arithmetic-finite-field.md" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/arithmetic-finite-field.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Arithmetic In A Finite Field
+    ~~ Arithmetic In A Finite Field ~~
     
   </span>
   
@@ -578,11 +670,11 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/doubling-points-finite-field.md" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/doubling-points-finite-field.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Doubling Points in a Finite Field
+    ~~ Doubling Points in a Finite Field ~~
     
   </span>
   
@@ -600,16 +692,115 @@
   
   
     <li class="md-nav__item">
-      <a href="elliptic-curves-101/acknowledgements-bibliography.html" class="md-nav__link">
+      <a href="../../elliptic-curves/elliptic-curves-101/090-acknowledgements-bibliography.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Acknowledgements and Bibliography
+    ~~ Acknowledgements and Bibliography ~~
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Practical Cryptography
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Practical Cryptography
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/practical-cryptography/010-threshold-cryptography.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Threshold Crytography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/practical-cryptography/020-mathematics-of-threshold.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Mathematics of Threshold Cryptography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -639,8 +830,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -656,17 +845,65 @@
 
 
 
-<h1 id="introduction-to-elliptic-curves">Introduction to Elliptic Curves</h1>
-<p>Elliptic curves are ...</p>
-<p>Here is an equation:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
-y^2 = x^3 + ax + b
-</div>
-<script type="math/tex; mode=display">
-y^2 = x^3 + ax + b
+  <h1>Weather</h1>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector("nav").style.display = "none";  // Hide the navigation
+    document.querySelector(".md-header").style.display = "none"; // Hide the header
+    document.querySelectorAll("nav, h1").forEach(el => el.style.display = "none");
+});
 </script>
+<div id="image-container" style="width:100%; text-align:center;">
+    <img id="radar-image" src="" style="max-width:100%; height:auto;" alt="Loading radar images...">
 </div>
+<script>
+    function pad(num, size) {
+        return ('0000' + num).slice(-size);
+    }
+
+    function generateImageUrls() {
+        const baseUrl = "https://radar.ozforecast.com.au/composites/Australia/";
+        let images = [];
+        const now = new Date();
+        now.setUTCMinutes(now.getUTCMinutes() - (now.getUTCMinutes() % 10));  // Round to nearest 10 minutes
+        now.setUTCSeconds(0);
+
+        for (let i = 0; i < 15; i++) {
+            let dateString = now.getUTCFullYear() +
+                             pad(now.getUTCMonth() + 1, 2) +
+                             pad(now.getUTCDate(), 2) + "-" +
+                             pad(now.getUTCHours(), 2) +
+                             pad(now.getUTCMinutes(), 2);
+            images.unshift(`${baseUrl}Australia-${dateString}_970.jpg`);
+            now.setUTCMinutes(now.getUTCMinutes() - 10);  // Move back 10 minutes
+        }
+        return images;
+    }
+
+    function cycleImages(imageUrls) {
+        let index = 0;
+        const imgElement = document.getElementById("radar-image");
+
+        function updateImage() {
+            imgElement.src = imageUrls[index];
+            index = (index + 1) % imageUrls.length;
+            if (index === 0) {
+                setTimeout(updateImage, 3000); // Pause for 3 seconds after a full cycle
+            } else {
+                setTimeout(updateImage, 500); // Show each image for 0.5s
+            }
+        }
+
+        updateImage();
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const imageUrls = generateImageUrls();
+        cycleImages(imageUrls);
+    });
+
+</script>
 
 
 
@@ -713,10 +950,10 @@ y^2 = x^3 + ax + b
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
       
