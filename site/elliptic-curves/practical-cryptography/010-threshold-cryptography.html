@@ -1055,15 +1055,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references-further-reading" class="md-nav__link">
-    <span class="md-ellipsis">
-      References &amp; Further Reading
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#further-reading-on-threshold-crytography" class="md-nav__link">
     <span class="md-ellipsis">
       Further Reading on Threshold Crytography
@@ -1137,7 +1128,7 @@
         
   
   <span class="md-ellipsis">
-    Bibliography & Reference (notes)
+    References (Under Construction)
     
   </span>
   
@@ -1386,15 +1377,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#references-further-reading" class="md-nav__link">
-    <span class="md-ellipsis">
-      References &amp; Further Reading
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#further-reading-on-threshold-crytography" class="md-nav__link">
     <span class="md-ellipsis">
       Further Reading on Threshold Crytography
@@ -1435,7 +1417,7 @@
 
 
 <h1 id="threshold-cryptography-a-trustless-approach-to-collective-agreement">Threshold Cryptography: A Trustless Approach to Collective Agreement</h1>
-<h2 id="overview">Overview</h2>
+<h2 id="overview"><strong>Overview</strong></h2>
 <p>Here we will explore the concept of using <strong><a href="https://en.wikipedia.org/wiki/Public-key_cryptography">public key cryptography</a></strong> to allow a group of systems or people to <strong><a href="https://www.sciencedirect.com/topics/computer-science/collective-agreement">collectively agree</a></strong> to unlock or decrypt something. Let's assume the core requirements of such a system are:</p>
 <ul>
 <li>A <strong><a href="https://blog.pantherprotocol.io/threshold-cryptography-an-overview/#:~:text=After%20setting%20the%20number%20of,at%20least%20two%20more%20people.">minimum number of participants</a></strong> (t-of-n) must agree to unlock access.</li>
@@ -1560,12 +1542,13 @@
 <h3 id="key-insight-partial-signatures-reveal-nothing"><strong>Key Insight: Partial Signatures Reveal Nothing</strong></h3>
 <p>Each participant computes a <strong><a href="https://eprint.iacr.org/2009/336.pdf">partial signature</a></strong> without <a href="https://www.researchgate.net/publication/2422330_Exposing_an_RSA_Private_Key_Given_a_Small_Fraction_of_its_Bits">exposing their private key share</a>. This works because:</p>
 <ol>
-<li><strong>Each signer picks a fresh random nonce</strong> $ k_i $ per request.</li>
-<li><strong>They commit to their nonce</strong>: $ R_i = g^{k_i} $.</li>
+<li><strong>Each signer picks a fresh random nonce</strong> <span class="arithmatex"><span class="MathJax_Preview"> k_i </span><script type="math/tex"> k_i </script></span> per request.</li>
+<li><strong>They commit to their nonce</strong>: <span class="arithmatex"><span class="MathJax_Preview"> R_i = g^{k_i} </span><script type="math/tex"> R_i = g^{k_i} </script></span>.</li>
 <li><strong>They compute their partial signature</strong>:</li>
 </ol>
 <p>$$ S_i = k_i + c \cdot x_i $$</p>
-<p>where $ c $ is a challenge computed from the message.</p>
+<p>where <span class="arithmatex"><span class="MathJax_Preview"> c </span><script type="math/tex"> c </script></span> is a challenge computed from the message.
+   s</p>
 <ol>
 <li><strong>Aggregation ensures security</strong>:</li>
 </ol>
@@ -1573,24 +1556,25 @@
 <p>The final signature is valid, but the private key remains unknown.</p>
 <h3 id="why-is-this-secure"><strong>Why is This Secure?</strong></h3>
 <ul>
-<li>The function $ S_i = f(x_i) $ is <strong><a href="https://en.wikipedia.org/wiki/One-way_function">one-way</a></strong> and non-invertible.</li>
-<li>Even if multiple signatures are observed, $ x_i $ <strong>cannot</strong> be derived.</li>
+<li>The function <span class="arithmatex"><span class="MathJax_Preview"> S_i = f(x_i) </span><script type="math/tex"> S_i = f(x_i) </script></span> is <strong><a href="https://en.wikipedia.org/wiki/One-way_function">one-way</a></strong> and non-invertible.</li>
+<li>Even if multiple signatures are observed, <span class="arithmatex"><span class="MathJax_Preview"> x_i </span><script type="math/tex"> x_i </script></span> <strong>cannot</strong> be derived.</li>
 <li>The aggregated signature is indistinguishable from a Schnorr signature created from a single private key input.</li>
 </ul>
+<p>For more details on how this works, mathematically, and why it is secure, please see <a href="020-mathematics-of-threshold.html">The Mathematics Behind Threshold Cryptography</a></p>
 <hr />
 <h2 id="practical-considerations"><strong>Practical Considerations</strong></h2>
 <h3 id="how-many-participants-can-be-in-a-pool"><strong>How Many Participants Can Be in a Pool?</strong></h3>
-<p>There is no strict limit, but communication overhead grows with $ n $. Common useage examples are:</p>
+<p>There is no strict limit, but communication overhead grows with <span class="arithmatex"><span class="MathJax_Preview"> n </span><script type="math/tex"> n </script></span>. Common useage examples are:</p>
 <ul>
-<li><strong>$ t = 3, n = 5 $</strong> (small teams)</li>
-<li><strong>$ t = 10, n = 100 $</strong> (large governance models)</li>
+<li><strong><span class="arithmatex"><span class="MathJax_Preview"> t = 3, n = 5 </span><script type="math/tex"> t = 3, n = 5 </script></span></strong> (small teams)</li>
+<li><strong><span class="arithmatex"><span class="MathJax_Preview"> t = 10, n = 100 </span><script type="math/tex"> t = 10, n = 100 </script></span></strong> (large governance models)</li>
 </ul>
 <p>but, theoretically, pools of participants and the number of people required to atisfy a request for partial signatures are only limited by considerations of performance.</p>
 <h3 id="how-agreement-works-in-practice"><strong>How Agreement Works in Practice</strong></h3>
 <ul>
 <li>Participants <strong>sign in any order</strong>, asynchronously.</li>
 <li>Each signer <strong>sends only their partial signature</strong> (which, importantly, still maintains the secrecy of the private key used)</li>
-<li>The final signature is computed once $ t $ shares are collected.</li>
+<li>The final signature is computed once <span class="arithmatex"><span class="MathJax_Preview"> t </span><script type="math/tex"> t </script></span> shares are collected.</li>
 </ul>
 <h3 id="who-sends-what-to-whom"><strong>Who Sends What to Whom?</strong></h3>
 <ul>
@@ -1600,13 +1584,18 @@
 <li>The system <strong>verifies</strong> the final signature before unlocking access.</li>
 </ul>
 <hr />
-<h2 id="references-further-reading"><strong>References &amp; Further Reading</strong></h2>
-<ul>
-<li><a href="https://eprint.iacr.org/2020/852">FROST: Flexible Round-Optimized Schnorr Threshold Signatures</a></li>
-<li><a href="https://eprint.iacr.org/2020/540">GG20: Gennaro-Goldfeder Threshold ECDSA</a></li>
-<li><a href="https://github.com/binance-chain/tss-lib">Binance’s tss-lib (Threshold Cryptography for Blockchain)</a></li>
-</ul>
 <h2 id="further-reading-on-threshold-crytography">Further Reading on Threshold Crytography</h2>
+<ul>
+<li>
+<p><a href="https://datatracker.ietf.org/doc/rfc9591/">The Flexible Round-Optimized Schnorr Threshold (FROST) Protocol for Two-Round Schnorr Signatures</a>: This document specifies the Flexible Round-Optimized Schnorr Threshold (FROST) signing protocol. FROST signatures can be issued after a threshold number of entities cooperate to compute a signature, allowing for improved distribution of trust and redundancy with respect to a secret key. FROST depends only on a prime-order group and cryptographic hash function. This document specifies a number of ciphersuites to instantiate FROST using different prime- order groups and hash functions. This document is a product of the Crypto Forum Research Group (CFRG) in the IRTF.</p>
+</li>
+<li>
+<p><a href="https://eprint.iacr.org/2020/852">FROST: Flexible Round-Optimized Schnorr Threshold Signatures</a>: Unlike signatures in a single-party setting, threshold signatures require cooperation among a threshold number of signers each holding a share of a common private key. Consequently, generating signatures in a threshold setting imposes overhead due to network rounds among signers, proving costly when secret shares are stored on network-limited devices or when coordination occurs over unreliable networks. In this work, we present FROST, a Flexible Round-Optimized Schnorr Threshold signature scheme that reduces network overhead during signing operations while employing a novel technique to protect against forgery attacks applicable to similar schemes in the literature.</p>
+</li>
+<li>
+<p><a href="https://eprint.iacr.org/2020/540">GG20: Gennaro-Goldfeder Threshold ECDSA</a>: ... we show how to build a tailored protocol for threshold ECDSA with minimal overhead... We present a highly efficient protocol with a non-interactive online phase allowing for players to asynchronously participate in the protocol without the need to be online simultaneously. We benchmark our protocols and find that our protocol simultaneously reduces the rounds and computations of current protocols, while adding significant functionality: identifiable abort and noninteractivity.</p>
+</li>
+</ul>
 <h3 id="practical-application">Practical Application</h3>
 <ul>
 <li>
@@ -1620,6 +1609,9 @@
 </li>
 <li>
 <p><a href="https://www.iacr.org/archive/crypto2018/10993213/10993213.pdf?utm_source=chatgpt.com"><em>Threshold Cryptosystems from Threshold Fully Homomorphic Encryption</em></a>: This paper explores threshold cryptosystems with non-interactive decentralized key generation, providing insights into advanced threshold encryption schemes.</p>
+</li>
+<li>
+<p><a href="https://github.com/bnb-chain/tss-lib"><em>Multi-Party Threshold Signature Scheme</em></a>: This is an implementation of multi-party {t,n}-threshold ECDSA (Elliptic Curve Digital Signature Algorithm) based on Gennaro and Goldfeder CCS 2018 1 and EdDSA (Edwards-curve Digital Signature Algorithm) following a similar approach.</p>
 </li>
 </ul>
 
