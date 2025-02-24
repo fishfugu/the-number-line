@@ -17,7 +17,7 @@ where:
 - \( h \) is a known **result**
 - \( p \) is a [**prime number**](<https://mathworld.wolfram.com/PrimeNumber.html#:~:text=A%20prime%20number%20(or%20prime,other%20than%201%20and%20itself.)>) (or the [order of the group](https://mathworld.wolfram.com/GroupOrder.html) in more general settings)
 
-In reference to the idea of [operations on sets of elements](set-group-ring-field.md), the operation:
+In reference to the idea of [operations on sets of elements](020-set-group-ring-field.md), the operation:
 $$ g^h $$
 
 refers to applying the operation (in this case, multiplication `*`) **h** times. That is:

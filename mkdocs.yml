@@ -1,8 +1,6 @@
 site_name: The Number Line
 theme:
   name: material
-  static_templates:
-    - images
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -39,16 +37,18 @@ nav:
           - Theorem / Proof, A line connecting P and Q always intersects a third point: elliptic-curves/elliptic-curves-101/050-theorem-line-intersection.md
           - The Additive Inverse: elliptic-curves/elliptic-curves-101/060-additive-inverse.md
           - Adding Points, Doubling Points: elliptic-curves/elliptic-curves-101/070-point-addition.md
-          - Expanding from Weierstrass To General Form: elliptic-curves/elliptic-curves-101/weierstrass-general.md
-          - ~~ Associativity ~~: elliptic-curves/elliptic-curves-101/associativity.md
-          - ~~ The Projective Plane ~~: elliptic-curves/elliptic-curves-101/projective-plane.md
-          - ~~ Homogeneous Equations ~~: elliptic-curves/elliptic-curves-101/homogeneous-equations.md
-          - ~~ Elliptic Curves In a Finite Field ~~: elliptic-curves/elliptic-curves-101/elliptic-curves-finite-field.md
-          - ~~ The Modular Multiplicative Inverse ~~: elliptic-curves/elliptic-curves-101/modular-multiplicative-inverse.md
-          - ~~ The Slope of an Elliptic Curve (Formal Derivative) ~~: elliptic-curves/elliptic-curves-101/slope-formal-derivative.md
-          - ~~ Arithmetic In A Finite Field ~~: elliptic-curves/elliptic-curves-101/arithmetic-finite-field.md
-          - ~~ Doubling Points in a Finite Field ~~: elliptic-curves/elliptic-curves-101/doubling-points-finite-field.md
-          - ~~ Acknowledgements and Bibliography ~~: elliptic-curves/elliptic-curves-101/090-acknowledgements-bibliography.md
+          - Expanding from Weierstrass To General Form: elliptic-curves/elliptic-curves-101/080-weierstrass-general.md
+          - ~~ Associativity ~~: elliptic-curves/elliptic-curves-101/090-associativity.md
+          - ~~ The Projective Plane ~~: elliptic-curves/elliptic-curves-101/100-projective-plane.md
+          - ~~ Homogeneous Equations ~~: elliptic-curves/elliptic-curves-101/110-homogeneous-equations.md
+          - ~~ Elliptic Curves In a Finite Field ~~: elliptic-curves/elliptic-curves-101/120-elliptic-curves-finite-field.md
+          - ~~ The Modular Multiplicative Inverse ~~: elliptic-curves/elliptic-curves-101/130-modular-multiplicative-inverse.md
+          - ~~ The Slope of an Elliptic Curve (Formal Derivative) ~~: elliptic-curves/elliptic-curves-101/140-slope-formal-derivative.md
+          - ~~ Arithmetic In A Finite Field ~~: elliptic-curves/elliptic-curves-101/150-arithmetic-finite-field.md
+          - ~~ Doubling Points in a Finite Field ~~: elliptic-curves/elliptic-curves-101/160-doubling-points-finite-field.md
+          - ~~ Acknowledgements and Bibliography ~~: elliptic-curves/elliptic-curves-101/900-acknowledgements-bibliography.md
+          - test page: elliptic-curves/elliptic-curves-101/test.md
       - Practical Cryptography:
-          - Threshold Crytography: elliptic-curves/practical-cryptography/010-threshold-cryptography.html
-          - The Mathematics of Threshold Cryptography: elliptic-curves/practical-cryptography/020-mathematics-of-threshold.html
+          - Threshold Crytography: elliptic-curves/practical-cryptography/010-threshold-cryptography.md
+          - The Mathematics of Threshold Cryptography: elliptic-curves/practical-cryptography/020-mathematics-of-threshold.md
+      - References (Under Construction): elliptic-curves/bibliography-references.md

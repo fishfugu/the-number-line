@@ -3,7 +3,7 @@
 🚧
 
 **Under Construction**  
-This section is still being developed. Some information may be incomplete or subject to change - or simply not well organised or very readable, yet.
+This section is still VERY MUCH under construction. Some information may be incomplete or subject to change - or simply not well organised or very readable, yet.
 
 🚧
 
@@ -159,4 +159,4 @@ https://crypto.stanford.edu/~dabo/papers/aggsurvey.pdf
 
 (these haven't been included or linkerd to from anywhere yet - remove them from this list, and move if you find a good place to link to them from!)
 
-- [https://skale.space/blog/mathematics-for-the-impatient-threshold-encryption](Mathematics for the Impatient from SKALE)
+- [Mathematics for the Impatient from SKALE](https://skale.space/blog/mathematics-for-the-impatient-threshold-encryption)

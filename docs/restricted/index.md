@@ -10,7 +10,7 @@ But don't get too excited. All we're keeping here is notes on what needs to be d
 
 ### Other Restricted Pages
 
-- [Notes on Animation](animation-notes.html)
+- [Notes on Animation](animation-notes.md)
 
 ## The Big TODO list
 
@@ -32,9 +32,13 @@ But don't get too excited. All we're keeping here is notes on what needs to be d
 
 ### Threshold Crytography
 
-- [mathematics-of-threshold.html](mathematics-of-threshold.html) "Since exponentiation and addition in elliptic curve groups are **homomorphic**, this means" - needs explanation, reference and more research
+- [mathematics-of-threshold.html](../elliptic-curves/practical-cryptography/020-mathematics-of-threshold.md) "Since exponentiation and addition in elliptic curve groups are **homomorphic**, this means" - needs explanation, reference and more research
 
-- [mathematics-of-threshold.html](mathematics-of-threshold.html) "where $ q $ is the order of the elliptic curve group" - the idea of `the order` needs explanation - a page - and references
+- [mathematics-of-threshold.html](../elliptic-curves/practical-cryptography/020-mathematics-of-threshold.md) "where $ q $ is the order of the elliptic curve group" - the idea of `the order` needs explanation - a page - and references
+
+- You can design a system where a predefined group of participants control access to signing operations, and additional members can be added dynamically if a quorum (threshold) of existing members approve the addition. Do we want to do more research into this aspect? This can be implemented using Threshold Signatures and Multi-Party Computation (MPC). See notes on topic...
+
+- [mathematics-of-threshold.html](../elliptic-curves/practical-cryptography/020-mathematics-of-threshold.md): check section at bottom under Practical Considerations and link to references on important topics within that summary
 
 ## The LONG list of "Things to Read Later (maybe)":
 

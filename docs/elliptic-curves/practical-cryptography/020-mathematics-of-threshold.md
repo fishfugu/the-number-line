@@ -42,7 +42,7 @@ $$ X = g^{(x_1 + x_2 + ... + x_n)} $$
 
     And so, the value of \( S_i \) can be safely sent to the requester of the response (or anyone else), giving nothing away about your private key, in the process.
 
-    For some background information on why calculating these things is "hard", or "practically impossible", see our previous article on [the Distrete Logarithm Problem](discrete-logarithm.html).
+    For some background information on why calculating these things is "hard", or "practically impossible", see our previous article on [the Distrete Logarithm Problem](../elliptic-curves-101/030-discrete-logarithm.md).
 
 Each participant generates a **random nonce** \( k_i \) per signing request:
 
@@ -94,7 +94,7 @@ If the equation holds, the signature is valid, proving that the group collective
 
 The security of this system relies on:
 
-- **[The Discrete Log Problem (DLP)](../../elliptic-curves-101/discrete-logarithm.html)**: Given \( g^x \), it is infeasible to compute \( x \) in polynomial time.
+- **[The Discrete Log Problem (DLP)](../elliptic-curves-101/030-discrete-logarithm.md)**: Given \( g^x \), it is infeasible to compute \( x \) in polynomial time.
 - **Random Nonces**: Since each signing request uses fresh random nonces, an attacker cannot link signatures to extract private keys.
 - **One-Way Hashing**: The challenge \( c \) is derived from the message, making replay attacks impossible.
 
@@ -104,7 +104,7 @@ Since **no single participant is ever capable of reconstructing the private key*
 
 ## More on Threshold Cryptography in General
 
-This page is intended as a "break out" from [this site's main explainer on Threshold Crytography](threshold_crypto_explainer.html). If you have come from there, to read this more detailed material, please [click here to return to the main explainer](threshold_crypto_explainer.html).
+This page is intended as a "break out" from [this site's main explainer on Threshold Crytography](010-threshold-cryptography.md). If you have come from there, to read this more detailed material, please [click here to return to the main explainer](010-threshold-cryptography.md).
 
 ## Further Reading on the Maths Behind Threshold Cryptography
 

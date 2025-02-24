@@ -28,7 +28,7 @@ $$ y^2 = x^3 + Ax + B $$
 
 an elliptic curve is said to be in the **Weierstrass Equation form**.
 
-There are [more general equations that define elliptic curves](https://mathworld.wolfram.com/EllipticCurve.html) over \( \mathbb{R} \) ([Washington, L. C., 2008, pp. 35-42, Section 2.5](acknowledgements-bibliography.md)). However, elliptic curves can be [**converted** into the Weierstrass Equation form](https://crypto.stanford.edu/pbc/notes/elliptic/weier.html) when defined across fields with [a characteristic other than **2 or 3**](https://mathworld.wolfram.com/EllipticCurve.html).
+There are [more general equations that define elliptic curves](https://mathworld.wolfram.com/EllipticCurve.html) over \( \mathbb{R} \) ([Washington, L. C., 2008, pp. 35-42, Section 2.5](900-acknowledgements-bibliography.md)). However, elliptic curves can be [**converted** into the Weierstrass Equation form](https://crypto.stanford.edu/pbc/notes/elliptic/weier.html) when defined across fields with [a characteristic other than **2 or 3**](https://mathworld.wolfram.com/EllipticCurve.html).
 
 ---
 
@@ -56,7 +56,7 @@ See below, an animation of different elliptic curves in the Weierstrass Form, fo
 The shape of an elliptic curve in Weierstrass form depends on the **discriminant**:
 $$ \Delta = -16(4A^3 + 27B^2) $$
 
-([Washington, L. C., 2008, pp. 9-11, Section 2.1](acknowledgements-bibliography))
+([Washington, L. C., 2008, pp. 9-11, Section 2.1](900-acknowledgements-bibliography.md))
 
 ---
 
@@ -70,7 +70,7 @@ $$ \Delta = -16(4A^3 + 27B^2) $$
 - If **\( \Delta > 0 \)**, the curve consists of **two disjoint loops**.  
   The cubic equation: \( x^3 + Ax + B = 0 \) has **three real solutions**.
 
-**Note:** The definition of these "loops" will become clearer once we introduce the concept of [**the point at infinity**](projective-plane). For now, we accept that the far end of each curve **connects at infinity**.
+**Note:** The definition of these "loops" will become clearer once we introduce the concept of [**the point at infinity**](100-projective-plane.md). For now, we accept that the far end of each curve **connects at infinity**.
 
 ### **Symmetry**
 
@@ -117,9 +117,9 @@ and therefore, the denominator would be 0.
 So we need to find the slope of E:
 $$ m = \frac{ x_P^2 + a }{ 2 y_P } $$
 
-([Washington, L. C., 2008, pp13-14, Section 2.2](acknowledgements-bibliography.md))
+([Washington, L. C., 2008, pp13-14, Section 2.2](900-acknowledgements-bibliography.md))
 
-The concept of finding the slope of an Elliptic Curve will be further explored in [the section on "Formal Derivatives"](slope-of-elliptic-curve.md). For now, we will simply say that we use the derivative for finding the slope at a point on the curve.
+The concept of finding the slope of an Elliptic Curve will be further explored in [the section on "Formal Derivatives"](140-slope-formal-derivative.md). For now, we will simply say that we use the derivative for finding the slope at a point on the curve.
 
 #### When \( y = 0 \)
 
@@ -131,9 +131,9 @@ $$ 2P = \text{"the point at infinity"} $$
 It can also be shown, related to the definition of addition for elliptic curves, that any straight line that passes through 3 points on the curve (\( P \), \( Q \) and \( R \)) represents the fact that:
 $$ P + Q + R = 0 $$
 
-For this, and many related reasons, the "point at infinity" is taken to be the "additive neutral element" for the Group defined for Elliptic Curves ([Washington, Section 2.3, pp18-20](acknowledgements-bibliography.md)).
+For this, and many related reasons, the "point at infinity" is taken to be the "additive neutral element" for the Group defined for Elliptic Curves ([Washington, Section 2.3, pp18-20](900-acknowledgements-bibliography.md)).
 
-NOTE: When defined in \( \mathbb{R} \), it can easily be shown that, if the tangent line to the curve \( E \) is anything other than vertical, [it will intersect with E (in the Affine plane), at another point](line-connecting-p-q-intersect-third-point.md).
+NOTE: When defined in \( \mathbb{R} \), it can easily be shown that, if the tangent line to the curve \( E \) is anything other than vertical, [it will intersect with E (in the Affine plane), at another point](050-theorem-line-intersection.md).
 
 ---
 

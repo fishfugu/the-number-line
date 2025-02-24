@@ -1,6 +1,6 @@
 # Threshold Cryptography: A Trustless Approach to Collective Agreement
 
-## Overview
+## **Overview**
 
 Here we will explore the concept of using **[public key cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography)** to allow a group of systems or people to **[collectively agree](https://www.sciencedirect.com/topics/computer-science/collective-agreement)** to unlock or decrypt something. Let's assume the core requirements of such a system are:
 
@@ -82,7 +82,7 @@ DKG allows a group to **[collectively generate a public-private keypair](https:/
 2. **Participants exchange cryptographic commitments** to verify correctness.
 3. **The collective public key is computed** from these shares, ensuring trustlessness.
 
-Also see: [https://eprint.iacr.org/2009/355.pdf](Asynchronous Distributed Private-Key Generators for Identity-Based Cryptography)
+Also see: [Asynchronous Distributed Private-Key Generators](https://eprint.iacr.org/2009/355.pdf)
 
 ### **Which Cryptosystems Support DKG?**
 
@@ -101,13 +101,14 @@ Also see: [https://eprint.iacr.org/2009/355.pdf](Asynchronous Distributed Privat
 
 Each participant computes a **[partial signature](https://eprint.iacr.org/2009/336.pdf)** without [exposing their private key share](https://www.researchgate.net/publication/2422330_Exposing_an_RSA_Private_Key_Given_a_Small_Fraction_of_its_Bits). This works because:
 
-1. **Each signer picks a fresh random nonce** $ k_i $ per request.
-2. **They commit to their nonce**: $ R_i = g^{k_i} $.
+1. **Each signer picks a fresh random nonce** \( k_i \) per request.
+2. **They commit to their nonce**: \( R_i = g^{k_i} \).
 3. **They compute their partial signature**:
 
    $$ S_i = k_i + c \cdot x_i $$
 
-   where $ c $ is a challenge computed from the message.
+   where \( c \) is a challenge computed from the message.
+   s
 
 4. **Aggregation ensures security**:
 
@@ -117,9 +118,11 @@ Each participant computes a **[partial signature](https://eprint.iacr.org/2009/3
 
 ### **Why is This Secure?**
 
-- The function $ S_i = f(x_i) $ is **[one-way](https://en.wikipedia.org/wiki/One-way_function)** and non-invertible.
-- Even if multiple signatures are observed, $ x_i $ **cannot** be derived.
+- The function \( S_i = f(x_i) \) is **[one-way](https://en.wikipedia.org/wiki/One-way_function)** and non-invertible.
+- Even if multiple signatures are observed, \( x_i \) **cannot** be derived.
 - The aggregated signature is indistinguishable from a Schnorr signature created from a single private key input.
+
+For more details on how this works, mathematically, and why it is secure, please see [The Mathematics Behind Threshold Cryptography](020-mathematics-of-threshold.md)
 
 ---
 
@@ -127,10 +130,10 @@ Each participant computes a **[partial signature](https://eprint.iacr.org/2009/3
 
 ### **How Many Participants Can Be in a Pool?**
 
-There is no strict limit, but communication overhead grows with $ n $. Common useage examples are:
+There is no strict limit, but communication overhead grows with \( n \). Common useage examples are:
 
-- **$ t = 3, n = 5 $** (small teams)
-- **$ t = 10, n = 100 $** (large governance models)
+- **\( t = 3, n = 5 \)** (small teams)
+- **\( t = 10, n = 100 \)** (large governance models)
 
 but, theoretically, pools of participants and the number of people required to atisfy a request for partial signatures are only limited by considerations of performance.
 
@@ -138,7 +141,7 @@ but, theoretically, pools of participants and the number of people required to a
 
 - Participants **sign in any order**, asynchronously.
 - Each signer **sends only their partial signature** (which, importantly, still maintains the secrecy of the private key used)
-- The final signature is computed once $ t $ shares are collected.
+- The final signature is computed once \( t \) shares are collected.
 
 ### **Who Sends What to Whom?**
 
@@ -149,13 +152,13 @@ but, theoretically, pools of participants and the number of people required to a
 
 ---
 
-## **References & Further Reading**
-
-- [FROST: Flexible Round-Optimized Schnorr Threshold Signatures](https://eprint.iacr.org/2020/852)
-- [GG20: Gennaro-Goldfeder Threshold ECDSA](https://eprint.iacr.org/2020/540)
-- [Binance’s tss-lib (Threshold Cryptography for Blockchain)](https://github.com/binance-chain/tss-lib)
-
 ## Further Reading on Threshold Crytography
+
+- [The Flexible Round-Optimized Schnorr Threshold (FROST) Protocol for Two-Round Schnorr Signatures](https://datatracker.ietf.org/doc/rfc9591/): This document specifies the Flexible Round-Optimized Schnorr Threshold (FROST) signing protocol. FROST signatures can be issued after a threshold number of entities cooperate to compute a signature, allowing for improved distribution of trust and redundancy with respect to a secret key. FROST depends only on a prime-order group and cryptographic hash function. This document specifies a number of ciphersuites to instantiate FROST using different prime- order groups and hash functions. This document is a product of the Crypto Forum Research Group (CFRG) in the IRTF.
+
+- [FROST: Flexible Round-Optimized Schnorr Threshold Signatures](https://eprint.iacr.org/2020/852): Unlike signatures in a single-party setting, threshold signatures require cooperation among a threshold number of signers each holding a share of a common private key. Consequently, generating signatures in a threshold setting imposes overhead due to network rounds among signers, proving costly when secret shares are stored on network-limited devices or when coordination occurs over unreliable networks. In this work, we present FROST, a Flexible Round-Optimized Schnorr Threshold signature scheme that reduces network overhead during signing operations while employing a novel technique to protect against forgery attacks applicable to similar schemes in the literature.
+
+- [GG20: Gennaro-Goldfeder Threshold ECDSA](https://eprint.iacr.org/2020/540): ... we show how to build a tailored protocol for threshold ECDSA with minimal overhead... We present a highly efficient protocol with a non-interactive online phase allowing for players to asynchronously participate in the protocol without the need to be online simultaneously. We benchmark our protocols and find that our protocol simultaneously reduces the rounds and computations of current protocols, while adding significant functionality: identifiable abort and noninteractivity.
 
 ### Practical Application
 
@@ -166,3 +169,5 @@ but, theoretically, pools of participants and the number of people required to a
 - [_Threshold Cryptography_](https://link.springer.com/referenceworkentry/10.1007/978-1-4419-5906-5_330?utm_source=chatgpt.com): This entry in the Encyclopedia of Cryptography and Security offers an overview of threshold cryptography, discussing its motivation, fundamental problems, and applications.
 
 - [_Threshold Cryptosystems from Threshold Fully Homomorphic Encryption_](https://www.iacr.org/archive/crypto2018/10993213/10993213.pdf?utm_source=chatgpt.com): This paper explores threshold cryptosystems with non-interactive decentralized key generation, providing insights into advanced threshold encryption schemes.
+
+- [_Multi-Party Threshold Signature Scheme_](https://github.com/bnb-chain/tss-lib): This is an implementation of multi-party {t,n}-threshold ECDSA (Elliptic Curve Digital Signature Algorithm) based on Gennaro and Goldfeder CCS 2018 1 and EdDSA (Edwards-curve Digital Signature Algorithm) following a similar approach.

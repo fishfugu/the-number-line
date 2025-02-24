@@ -11,7 +11,7 @@ where **\( \mathscr{O} \)** is the **point at infinity**.
   <video width="640" height="360" controls>
     <source src="vid/additive-inverse.mp4" type="video/mp4">
     Your browser does not support the video tag.
-  </video>
+  </video>s
 </div>
 
 ---
@@ -33,7 +33,7 @@ It should also be noted that an **Elliptic Curve** defined on any field with **c
 
 ### **Equation of the Elliptic Curve in Weierstrass Form**
 
-The **graph of an elliptic curve** in **Weierstrass form** ([Washington, L. C., 2008, pp. 9-11, Section 2.1](acknowledgements-bibliography.md)) is given by:
+The **graph of an elliptic curve** in **Weierstrass form** ([Washington, L. C., 2008, pp. 9-11, Section 2.1](900-acknowledgements-bibliography.md)) is given by:
 $$ y^2 = x^3 + Ax + B $$
 
 where **\( A \)** and **\( B \)** are constants.
@@ -103,7 +103,7 @@ Less obviously, the **inverse by vertical line projection** also applies to some
 A **general form** of an elliptic curve is:
 $$ y^2 + a_1xy + a_3y = x^3 + a_2x^2 + a_4x + a_6 $$
 
-([Washington, L. C., 2008, p. 10, Equation 2.1](acknowledgements-bibliography.md)) where **\( a_1, a_2, a_3, a_4, a_6 \)** are constants.
+([Washington, L. C., 2008, p. 10, Equation 2.1](900-acknowledgements-bibliography.md)) where **\( a_1, a_2, a_3, a_4, a_6 \)** are constants.
 
 ### **Computing the Inverse in General Form**
 
