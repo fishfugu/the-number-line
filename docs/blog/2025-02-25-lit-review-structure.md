@@ -99,7 +99,8 @@ _(Master of Scientific Studies – Mathematics)_
   - Advances in DLP: New research on solving the discrete logarithm problem, especially composite fields or large moduli
 
 !!! note "Does this fit?"
-I'm not sure... I haven't got under the skin of how truely important QC is yet... and I don't know whether to go down this rabbit hole or not...
+
+    I'm not sure... I haven't got under the skin of how truely important QC is yet... and I don't know whether to go down this rabbit hole or not...
 
 - **Impact of Quantum Computing**: A discussion of quantum-resistant algorithms and their potential impact on the use of elliptic curves in cryptography
 
