@@ -155,8 +155,10 @@ https://crypto.stanford.edu/~dabo/papers/aggsurvey.pdf
 
 - [Exposing an RSA Private Key Given a Small Fraction of its Bits](https://www.researchgate.net/publication/2422330_Exposing_an_RSA_Private_Key_Given_a_Small_Fraction_of_its_Bits)
 
-### Other Things to Include
-
-(these haven't been included or linkerd to from anywhere yet - remove them from this list, and move if you find a good place to link to them from!)
-
 - [Mathematics for the Impatient from SKALE](https://skale.space/blog/mathematics-for-the-impatient-threshold-encryption)
+
+# Manim (the 3Blue1Brown animation library)
+
+- [Tute for Manim use](https://www.youtube.com/watch?v=KHGoFDB-raE)
+
+- [Discord Channel (for help)](https://discord.com/invite/bYCyhM9Kz2) - this YouTuber isn't deep into Python... but that'a kind of a good thing - because it means he doesn't get too distracted by any of the details - what he doesn't know is how to do basic manim animation... which is helpful for beginners (like me).

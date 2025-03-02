@@ -5,17 +5,40 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.path
+    - content.code.annotate
+    - content.action.edit
+    - content.tooltips
+    - navigation.indexes
+    - navigation.sections
+    - content.blog # Enable built-in Material blog
 
 use_directory_urls: false
 
 plugins:
   - search
+  - blog:
+      blog_dir: blog
+      blog_toc: true
+      post_url_format: "{categories}/{slug}"
+      post_url_max_categories: 20
+      # TODO: create post exerpts and make this required
+      post_excerpt: optional
+      # all content before the separator is considered to be part of the excerpt:
+      post_excerpt_separator: <!-- more -->
+      post_readtime: true
+      post_readtime_words_per_minute: 200
+      archive: true
+      archive_name: Archive
+      archive_date_format: MMMM yyyy
+
+site_url: https://fishfugu.github.io/the-number-line/
 
 markdown_extensions:
   - pymdownx.arithmatex
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - meta # Enables metadata in Markdown files
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js
@@ -52,3 +75,5 @@ nav:
           - Threshold Crytography: elliptic-curves/practical-cryptography/010-threshold-cryptography.md
           - The Mathematics of Threshold Cryptography: elliptic-curves/practical-cryptography/020-mathematics-of-threshold.md
       - References (Under Construction): elliptic-curves/bibliography-references.md
+  - Blog:
+      - blog/index.md
