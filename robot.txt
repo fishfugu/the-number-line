@@ -1,2 +1,6 @@
+# This robots.txt file blocks all crawlers from accessing any pages
 User-agent: *
-Disallow: /restricted/
+Disallow: /
+
+# later - switch it to simply: 
+# Disallow: /restricted/
