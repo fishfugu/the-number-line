@@ -30,8 +30,18 @@ hr {
     margin-left: 1em;
 }
 
+.note,
+.abstract,
+.info,
+.tip,
+.success,
 .question,
-.tip {
+.warning,
+.failure,
+.danger,
+.bug,
+.example,
+.quote {
     float: right;
     width: 40%;
     margin-left: 1em;
