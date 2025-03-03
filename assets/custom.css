@@ -29,3 +29,10 @@ hr {
     width: 40%;
     margin-left: 1em;
 }
+
+.question,
+.tip {
+    float: right;
+    width: 40%;
+    margin-left: 1em;
+}
