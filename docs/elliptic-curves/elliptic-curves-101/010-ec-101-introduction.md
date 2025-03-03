@@ -1,6 +1,6 @@
 # Elliptic Curves 101 - Introduction
 
-!!! note "Why copy the material here - not just link to it?"
+??? question "Why copy the material here - not just link to it?"
 
     ... so that it can be updated and improved over time, without the requirement to edit [the original site](https://www.creativearts.com.au/maths/une/sci395) (which remains as an archived output of the original Research Project). We will update the information in this part of the site, to ensure it is as clear and helpful as possible.
 

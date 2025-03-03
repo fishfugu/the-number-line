@@ -184,7 +184,7 @@ $$ a \ast \mathbb{1} = a \quad \text{and} \quad \mathbb{1} \ast a = \mathbb{1} \
 
 ---
 
-!!! note "More on Fields"
+!!! tip "More on Fields"
 
     [Wolfram MathWorld](https://mathworld.wolfram.com/Field.html)
 
