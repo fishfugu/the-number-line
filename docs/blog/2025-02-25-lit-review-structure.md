@@ -98,7 +98,7 @@ _(Master of Scientific Studies – Mathematics)_
 
   - Advances in DLP: New research on solving the discrete logarithm problem, especially composite fields or large moduli
 
-!!! note "Does this fit?"
+!!! question "Does this fit?"
 
     I'm not sure... I haven't got under the skin of how truely important QC is yet... and I don't know whether to go down this rabbit hole or not...
 
