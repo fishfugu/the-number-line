@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("nav").style.display = "none";  // Hide the navigation

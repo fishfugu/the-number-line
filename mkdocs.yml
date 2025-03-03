@@ -1,18 +1,65 @@
 site_name: The Number Line
 theme:
   name: material
+  favicon: assets/img/number-line-logo-favicon-teal.jpg
+  logo: assets/img/number-line-logo-1.png
+  site_url: https://fishfugu.github.io/the-number-line/
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  extra:
+    analytics:
+      provider: google
+      property: G-DV0QCN1Y37
+    consent:
+      title: Cookie consent
+      description: >- 
+        We use cookies to recognise your repeated visits and preferences, as well
+        as to measure the effectiveness of our documentation and whether users
+        find what they're searching for. With your consent, you're helping us to
+        make our documentation better.
   features:
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.path
     - content.code.annotate
     - content.action.edit
     - content.tooltips
+    - content.blog # Enable built-in Material blog
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.path
     - navigation.indexes
     - navigation.sections
-    - content.blog # Enable built-in Material blog
+    - search.suggest
+    - search.highlight
+    - search.share
+    - search.exclude
 
 use_directory_urls: false
+
+copyright: >
+  Copyright &copy; 2016 - 2025 Nicholas Gledhill
+  &nbsp &nbsp -- &nbsp &nbsp
+  <a href="#__consent">Change cookie settings</a>
 
 plugins:
   - search

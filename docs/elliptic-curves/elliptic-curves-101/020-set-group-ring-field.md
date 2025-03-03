@@ -6,71 +6,115 @@
 
 ![abstract representation of sets, groups, rings and fields in Elliptic Curve](img/rings.png)
 
-!!! note "More on Sets"
+??? tip "More on Sets"
 
     [Wolfram MathWorld](https://mathworld.wolfram.com/Set.html)
 
 ## Set
 
-A [**set**](<https://en.wikipedia.org/wiki/Set_(mathematics)>) is a collection of distinct objects, considered as an object in its own right. These objects are called the elements or members of the set.
+A [**set**](<https://en.wikipedia.org/wiki/Set_(mathematics)>) is:
+
+> any collection of **distinct objects**, considered an object in its own right.
+
+These **objects** are called the **elements** or **members** of the **set**.
+
+Pretty much anything you want to define as a "**group of distinct objects**" can be defined as a **set**. It is a purposefully, and sometimes usefully, general definition.
 
 ---
 
-!!! note "More on Groups"
+??? tip "More on Groups"
 
     [Wolfram MathWorld](https://mathworld.wolfram.com/Group.html)
 
 ## Group
 
-A [**group**](<https://en.wikipedia.org/wiki/Group_(mathematics)>) is a **set** equipped with an operation that combines any two elements to form a third element (which also must belong to the set) in such a way that it is:
+A [**group**](<https://en.wikipedia.org/wiki/Group_(mathematics)>) is:
 
-- **Associative**
-- Has an **identity element**
-- Every element has an **inverse** with repect to a given operation
+> a **set** equipped with an **operation**.
+    
+This **operation** must combine any two elements of the **set**, to form a third element (which must also belong to the set). Importantly, this **operation** must have two qualities. It must:
 
-### **Associative Property**
+- be **associative**
+- have an **identity element**
 
-An operation is "**associative**" if changing the grouping of the operands does not change the result. If the operation is denoted by `*`, then for any elements \( a, b, c \):
+See below for a definition of an **identity element**.
+
+Furthermore, for a **set** to also be a **group**:
+
+> every element must have an **inverse** with repect to the operation defined on it
+
+Each of these requirements is defined more specifically, below.
+
+??? question "As a an intuitive example, the **real** numbers \( \mathbb{R} \) can be considerd a **set** (fairly obviously), but... is the **set** of **real** numbers a **group**?"
+
+    Yes, the set of **Real** numbers \( \mathbb{R} \) forms a **group** when the **operation** considered is addition; meaning that the **set** of **real** numbers with the **operation** of addition satisfies all the properties of a **group** (closure, associativity, identity element, inverses) making it actuallly an **abelian group** (see below, for more details).
+
+### Associative Property
+
+The **operation** defined for a **group** must be **associative**. An operation is "**associative**" if changing the grouping of the operands does not change the result. If the **operation** is denoted by `*`, then for any elements \( a, b, c \):
+
 $$ (a \ast b) \ast c = a \ast (b \ast c) $$
 
 always holds.
 
-### **Identity Element**
+??? question "So what are the identity elements for the Real numbers?"
 
-An **identity element** is an element in a set that, when combined with any other element of the set through a specific binary operation, leaves the other element unchanged.
+    In the **set** of **real** numbers, the **identity elements** are:
 
-For a binary operation `*` defined on a set \( S \), an element \( e \in S \) is an identity element if, for every element \( a \in S \):
-$$ e_a = a \quad \text{and} \quad a_e = a $$
+    - \( 0 \) for the addition **operation**, and
 
-Common examples include:
+    - \( 1 \) for the multiplication **operation**
+    
+    because:
+    
+    - \( x + 0 = x \), and
+    - \( x \ast 1 = x \)
 
-- \( 0 \) for addition
-- \( 1 \) for multiplication
+    This is why you often see references to the "**additive idenity element**" or the "**multiplicative identity element**". These elements, in any **group**, are analogous to \( 0 \) and/or \( 1 \), in the **set** of **real** numbers, when considering the **operations** addition and multiplication.
 
-### **Inverse Element**
+### Identity Element
 
-An **inverse** under a particular binary operation is an element that, when combined with another element, results in the identity element.
+A **group** must have an identity element, for the **operation** defined on it. An **identity element** is an element in a **set** that, when combined with any other element of the **set** through the operation, leaves the other element unchanged.
 
-For an operation `*` defined on a set, if \( e \) is the identity element, then for any element \( a \) in the set, an element \( b \) (often denoted as \( a^{-1} \)) is called the inverse of \( a \) if:
+For a **binary operation** `*` defined on a set \( S \), an element \( e \in S \) is an **identity element** if, for every element \( a \in S \):
+
+$$ e \ast a = a \quad \text{and} \quad a \ast e = a $$
+
+??? question "What does this mean in the **real** numbers?"
+
+    Considering the **operation** of addition: the inverse of \( 3 \) is \( -3 \), because:
+
+    $$ 3 + (-3) = 0 $$
+
+    and \( 0 \) is the **neutral element** with respect to addition (see above).
+
+    Consdidering the **operation** of mutiplication: the inverse of \( 3 \) is \( 1/3 \), because:
+
+    $$ 3 \ast ({1 \over 3}) = 1 $$
+
+    and \( 1 \) is the **neutral element** with respect to multiplication (see above).
+
+### Inverse Element
+
+For a **set** to be a **group**, each element in it must have an **inverse**.
+
+An **inverse element** is an **element** of the **set** that, when combined with another **element**, under the **operation**, results in the **identity element**.
+
+For an **operation** `*` defined on a **set**: if \( e \) is the **identity element**, then for any **element** \( a \) in the **set**, and **element** \( b \) (often denoted as \( a^{-1} \)) is called the **inverse** of \( a \) if:
+
 $$ a \ast b = e \quad \text{and} \quad b \ast a = e $$
-
-Common examples:
-
-- **Additive inverse**: \( a + (-a) = 0 \)
-- **Multiplicative inverse**: \( a \times a^{-1} = 1 \)
 
 ---
 
-!!! note "More on Abelian Groups"
+??? tip "More on Abelian Groups"
 
     [Wolfram MathWorld](https://mathworld.wolfram.com/AbelianGroup.html)
 
 ## Abelian Group
 
-An **abelian group** is a group in which the group operation is also **commutative** (as well as **associative**). "**Commutative**" means that the order in which two elements are combined does not affect the result:
-$$ a \ast b = b \ast a $$
+An **abelian group** is a group in which the group operation is also **commutative** (as well as **associative**).
 
-### **Commutative Property**
+### Commutative Property
 
 An operation is **commutative** if:
 $$ a \ast b = b \ast a $$
@@ -79,33 +123,64 @@ for all elements \( a, b \) in the set.
 
 ---
 
-!!! note "More on Rings"
+??? tip "More on Rings"
 
     [Wolfram MathWorld](https://mathworld.wolfram.com/Ring.html)
 
 ## Ring
 
-A [**ring**](<https://en.wikipedia.org/wiki/Ring_(mathematics)>) is a **set** equipped with two binary operations (usually referred to as **addition** and **multiplication**) where:
+A [**ring**](<https://en.wikipedia.org/wiki/Ring_(mathematics)>) is a **set** equipped with two binary operations (often referred to as "**addition**" and "**multiplication**") where:
 
-- Addition forms a **group**
-- Multiplication is **associative**
-- The **distributive property** holds over addition
+- "**addition**" forms a **group** - that is:
+    1. "**addition**" is **associative**
+    2. "**addition**" has an **identity element**
+    3. all **elements** have an inverse under **addition**
+- "**multiplication**" is **associative** - that is:
+    - \( a * b = b * a \)
+- the **distributive property** holds over addition - that is:
+    - \( a \ast ( b + c ) = (a \ast b) + (a \ast c) \)
 
-### **Key Properties of a Ring**
+### Key Properties of a Ring
 
-For all \( a, b, c \in R \):
+We've spent some time adding defininitions to definitions:
 
-- [**Closure under addition and multiplication**](<https://en.wikipedia.org/wiki/Closure_(mathematics)>): \( a + b \in R \) and \( a \times b \in R \)
-- [**Associativity of addition and multiplication**](https://www.britannica.com/science/ring-mathematics): \( (a + b) + c = a + (b + c), \quad (a \times b) \times c = a \times (b \times c) \)
-- [**Commutativity of addition**](https://en.wikipedia.org/wiki/Commutative_property): \( a + b = b + a \)
-- [**Existence of an additive identity**](https://en.wikipedia.org/wiki/Additive_identity): There exists \( 0 \in R \) such that \( a + 0 = a \)
-- [**Existence of additive inverses**](https://en.wikipedia.org/wiki/Additive_inverse): For every \( a \in R \), there exists \( -a \in R \) such that \( a + (-a) = 0 \)
-- [**Distributive laws**](https://www.britannica.com/science/distributive-law): \( a \times (b + c) = a \times b + a \times c \)
+- a **set**
+    - a **group** (a **set** with extra properties)
+    - a **ring** (a **set** with yet more added properties)
+    ...
+
+So let's look at **all** the properties of **ring** once we put them together:
+
+For a **ring** \( {R} \), for all \( a, b, c \in {R} \):
+
+- [**Closure** under addition and multiplication](<https://en.wikipedia.org/wiki/Closure_(mathematics)>):
+    1. \( a + b \in {R} \text{, and } \quad \)
+    2. \( a \times b \in {R} \)
+
+- [**Associativity** of addition and multiplication](https://www.britannica.com/science/ring-mathematics):
+    1. \( (a + b) + c = a + (b + c) \text{, and } \quad \)
+    2. \( (a \times b) \times c = a \times (b \times c) \)
+
+- [**Commutativity** of addition](https://en.wikipedia.org/wiki/Commutative_property):
+    - \( a + b = b + a \)
+
+- [Existence of an **additive identity element**](https://en.wikipedia.org/wiki/Additive_identity):
+    - there exists \( \mathbb{0} \in {R} \), such that \( a + \mathbb{0} = a \)
+- [Existence of the **additive inverse elements**](https://en.wikipedia.org/wiki/Additive_inverse):
+    - for every \( a \in R \), there exists \( -a \in R \) such that:
+    
+    $$ a + (-a) = \mathbb{0} \quad \text{ (the additive identity element)}$$
+
+- [**Distributive** laws](https://www.britannica.com/science/distributive-law):
+    - \( a \times (b + c) = a \times b + a \times c \)
 
 #### Optional Properties:
 
-- [**Multiplicative identity**](https://www.britannica.com/science/distributive-law): In some definitions, particularly for **rings** that are also termed unital or unitary, there exists an element \( 1 \in R \) (distinct from 0) such that \( a \ast 1 = a \) and \( 1 \ast a = 1 \) for all \( a \in R \)
-- [**Commutativity of multiplication**](https://en.wikipedia.org/wiki/Commutative_ring): In a **commutative ring**, for all \( a, b \in R \), \( a \ast b = b \ast a \). However, this property is not required for a **set** to be a **ring**. Without this property, the set is called a "**non-commutative ring**" If satisfied, the ring is called a "**commutative ring**".
+- [**Multiplicative identity**](https://www.britannica.com/science/distributive-law): in some definitions, particularly for **rings** that are also termed **unital rings** or **unitary rings**, there exists an element \( \mathbb{1} \in {R} \) (distinct from \( \mathbb{0} \)) such that:
+
+$$ a \ast \mathbb{1} = a \quad \text{and} \quad \mathbb{1} \ast a = \mathbb{1} \quad \text{for all} \quad a \in {R} $$
+
+- [**Commutativity of multiplication**](https://en.wikipedia.org/wiki/Commutative_ring): in a **commutative ring**, for all \( a, b \in R \), \( a \ast b = b \ast a \). However, this property is not required for a **set** to be a **ring**. Without this property, the set is called a "**non-commutative ring**" If satisfied, the ring is called a "**commutative ring**".
 
 ---
 
@@ -115,7 +190,7 @@ For all \( a, b, c \in R \):
 
 ## Field
 
-A [**field**](<https://en.wikipedia.org/wiki/Field_(mathematics)>) is a set equipped with two binary operations (addition and multiplication) that satisfy:
+A [**field**](<https://en.wikipedia.org/wiki/Field_(mathematics)>) is a set equipped with two binary operations (usually referred to as **addition** and **multiplication**) that satisfy:
 
 - [**Closure**](<https://en.wikipedia.org/wiki/Closure_(mathematics)>): \( a + b \in F \), \( a \times b \in F \) ([Wolfram MathWorld](https://mathworld.wolfram.com/Closure.html#:~:text=In%20algebra%2C%20the%20algebraic%20closure,adjoining%20all%20elements%20algebraic%20over%20.))
 - [**Associativity**](https://en.wikipedia.org/wiki/Associative_property): \( (a + b) + c = a + (b + c) \) and \( (a \times b) \times c = a \times (b \times c) \) ([Wolfram MathWorld](https://mathworld.wolfram.com/Associative.html))

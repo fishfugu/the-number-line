@@ -1,16 +1,18 @@
 # Elliptic Curves 101 - Introduction
 
+!!! note "Why copy the material here - not just link to it?"
+
+    ... so that it can be updated and improved over time, without the requirement to edit [the original site](https://www.creativearts.com.au/maths/une/sci395) (which remains as an archived output of the original Research Project). We will update the information in this part of the site, to ensure it is as clear and helpful as possible.
+
 ## Background
 
-Welcome to **Elliptic Curves 101**. The content for this section of The Number Line was originally taken from: [The Case for Curves: Unraveling Elliptic Curves](https://www.creativearts.com.au/maths/une/sci395).
+Welcome to **Elliptic Curves 101**. The content for this section of The Number Line's Elliptic Curve Explainer was originally taken from: [The Case for Curves: Unraveling Elliptic Curves](https://www.creativearts.com.au/maths/une/sci395).
 
 This material was the output of a Research Project by Nicholas Gledhill, supervised by [Dr. Jelena Schmalz](https://www.une.edu.au/staff-profiles/science-and-technology/jschmalz) at the [University of New England (UNE)](https://www.une.edu.au/), for [the unit SCI395 - Science Report](https://www.une.edu.au/study/units/science-report-sci395).
 
 ---
 
 ![abstract representation of Elliptic Curves in 3-dimensional space](img/intro.png)
-
-The material here has been copied (not simply linked to) so that it can be updated and improved over time, without the requirement to edit the original site (which remains as an archived output of the original Research Project). We will update the information in this site, to ensure it is as clear and helpful as possible.
 
 ---
 

@@ -54,6 +54,7 @@ See below, an animation of different elliptic curves in the Weierstrass Form, fo
 ### **Discriminant and Shape**
 
 The shape of an elliptic curve in Weierstrass form depends on the **discriminant**:
+
 $$ \Delta = -16(4A^3 + 27B^2) $$
 
 ([Washington, L. C., 2008, pp. 9-11, Section 2.1](900-acknowledgements-bibliography.md))

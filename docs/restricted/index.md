@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 <script src="../assets/restricted.js"></script>
 
 # The Number Line

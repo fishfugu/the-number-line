@@ -1,3 +1,10 @@
+---
+search:
+  exclude: true
+---
+
+<script src="../assets/restricted.js"></script>
+
 From the [3Blue1Brown FAQ](https://www.3blue1brown.com/faq):
 
 > Almost all animations are made using a custom open-source Python library named [Manim](https://github.com/3b1b/manim). Code for specific videos can be found in [this repository](https://github.com/3b1b/videos).
