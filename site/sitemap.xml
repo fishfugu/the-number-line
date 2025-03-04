@@ -2,114 +2,134 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://fishfugu.github.io/the-number-line/index.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/blog/index.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
-         <loc>https://fishfugu.github.io/the-number-line/blog/2025-02-25-lit-review-structure.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <loc>https://fishfugu.github.io/the-number-line/blog/2025/02/25/literature-review-on-elliptic-curves---defining-the-scope.html</loc>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
-         <loc>https://fishfugu.github.io/the-number-line/blog/2025-02-25-og-structure.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <loc>https://fishfugu.github.io/the-number-line/blog/2025/02/25/literature-review---original-structure-ideas.html</loc>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/bibliography-references.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/010-ec-101-introduction.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/020-set-group-ring-field.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/030-discrete-logarithm.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/040-elliptic-curves-real.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/050-theorem-line-intersection.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/060-additive-inverse.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/070-point-addition.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/080-weierstrass-general.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/090-associativity.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/100-projective-plane.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/110-homogeneous-equations.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/120-elliptic-curves-finite-field.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/130-modular-multiplicative-inverse.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/140-slope-formal-derivative.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/150-arithmetic-finite-field.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/160-doubling-points-finite-field.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/900-acknowledgements-bibliography.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/elliptic-curves-101/test.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/practical-cryptography/010-threshold-cryptography.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/elliptic-curves/practical-cryptography/020-mathematics-of-threshold.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/restricted/index.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/restricted/animation-notes.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
     </url>
     <url>
          <loc>https://fishfugu.github.io/the-number-line/restricted/mrh/weather.html</loc>
-         <lastmod>2025-03-03</lastmod>
+         <lastmod>2025-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://fishfugu.github.io/the-number-line/blog/archive/2025.html</loc>
+         <lastmod>2025-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://fishfugu.github.io/the-number-line/blog/category/2025-literature-review.html</loc>
+         <lastmod>2025-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://fishfugu.github.io/the-number-line/blog/category/elliptic-curves.html</loc>
+         <lastmod>2025-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://fishfugu.github.io/the-number-line/blog/category/2024-literature-review.html</loc>
+         <lastmod>2025-03-04</lastmod>
+    </url>
+    <url>
+         <loc>https://fishfugu.github.io/the-number-line/blog/category/scope.html</loc>
+         <lastmod>2025-03-04</lastmod>
     </url>
 </urlset>

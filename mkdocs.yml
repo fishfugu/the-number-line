@@ -62,21 +62,10 @@ copyright: >
   <a href="#__consent">Change cookie settings</a>
 
 plugins:
+  - tags
   - search
   - blog:
-      blog_dir: blog
-      blog_toc: true
-      post_url_format: "{categories}/{slug}"
-      post_url_max_categories: 20
-      # TODO: create post exerpts and make this required
-      post_excerpt: optional
-      # all content before the separator is considered to be part of the excerpt:
-      post_excerpt_separator: <!-- more -->
-      post_readtime: true
-      post_readtime_words_per_minute: 200
-      archive: true
-      archive_name: Archive
-      archive_date_format: MMMM yyyy
+      authors_profiles: true
 
 site_url: https://fishfugu.github.io/the-number-line/
 

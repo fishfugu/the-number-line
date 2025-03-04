@@ -92,3 +92,7 @@ No. Words: 4000
 
 Assessment 3
 Oral presentation.
+
+## mkDocs Doco
+
+https://squidfunk.github.io/mkdocs-material/reference/annotations/

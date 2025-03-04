@@ -1,13 +1,18 @@
 ---
-title: "Original Structure for Elliptic Curve Literature Review"
-date: 2025-02-25
-categories: ["Literature Review", "Elliptic Curves"]
-tags: ["structure", "preparation"]
-authors: ["Nicholas Gledhill"]
-description: "Original structure rejected for length, size and complexity."
+date: 2025-02-25 
+categories:
+  - 2024 Literature Review
+  - Elliptic Curves
+  - Scope
+authors:
+  - fishfugu
 ---
 
 # Literature Review - Original Structure Ideas
+
+Somme of the original, more wide ranging ideas that arose while researching ideas for the Literature Review.
+
+<!-- more -->
 
 ## Version 0 (too long / complex)
 
