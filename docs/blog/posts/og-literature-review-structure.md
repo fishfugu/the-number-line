@@ -1,5 +1,5 @@
 ---
-date: 2025-02-25 
+date: 2025-02-25
 categories:
   - 2024 Literature Review
   - Elliptic Curves
@@ -10,7 +10,7 @@ authors:
 
 # Literature Review - Original Structure Ideas
 
-Somme of the original, more wide ranging ideas that arose while researching ideas for the Literature Review.
+Some of the original, more wide ranging ideas that arose while researching ideas for the Literature Review.
 
 <!-- more -->
 
