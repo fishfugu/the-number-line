@@ -29,13 +29,13 @@ The output of that effort can be found here: [_The Case for Curves: Unravelling 
 
 Now, to be completely transparent, having taken this course, I am still not entirely certain of the _formal_ or _comprehensive_ definition of a [Literature Review](https://en.wikipedia.org/wiki/Literature_review). I navigated my way through reading, evaluating sources, and crafting my first (small, undergraduate-level) Literature Review somewhat intuitively, learning by doing and refining my approach as I went.
 
-Moving forward, as a [postgraduate student](https://en.wikipedia.org/wiki/Postgraduate_education) looking to continue my work on [Elliptic Curves](https://en.wikipedia.org/wiki/Elliptic_curve) and preparing to produce a more advanced Literature Review for my next degree—the [Master of Scientific Studies](https://www.une.edu.au/study/courses/master-of-scientific-studies?international=true&gad_source=1&gclid=Cj0KCQiA8q--BhDiARIsAP9tKI2-qtWa4cS04MIuti2h7bseMrEKWFZN9OMb8CqWx9UnGMYl5aE7c2AaAtanEALw_wcB&gclsrc=aw.ds)—I find myself asking once again: **What exactly is a Literature Review?**
+Moving forward, as a [postgraduate student](https://en.wikipedia.org/wiki/Postgraduate_education) looking to continue my work on [Elliptic Curves](https://en.wikipedia.org/wiki/Elliptic_curve) and preparing to produce a more advanced Literature Review for my next degree - the [Master of Scientific Studies](https://www.une.edu.au/study/courses/master-of-scientific-studies?international=true&gad_source=1&gclid=Cj0KCQiA8q--BhDiARIsAP9tKI2-qtWa4cS04MIuti2h7bseMrEKWFZN9OMb8CqWx9UnGMYl5aE7c2AaAtanEALw_wcB&gclsrc=aw.ds) - I find myself asking once again: **What exactly is a Literature Review?**
 
 According to the Course Information for the Master's degree:
 
 > Our coursework Master's degree gives you opportunities to future-fit your career by expanding on your expertise, upgrading your applied skills, and developing the advanced knowledge needed to solve complex problems in the rapidly changing world of science and technology.
 
-This objective aligns with my desire to build upon my previous work—essentially copying the earlier material into a new site (so the old work can be archived) and extending it. My plan is to create a more expansive knowledge base for all my future mathematics-related research. For an outline of the site’s purpose, please refer to the homepage [here](https://fishfugu.github.io/the-number-line/).
+This objective aligns with my desire to build upon my previous work - essentially copying the earlier material into a new site (so the old work can be archived) updating and improving that content, and then comprehesively extending it, and rewroking it into a broader **knowledge base** on the topic. My plan is to create a more expansive knowledge base for all my future mathematics-related research. For an outline of the site’s purpose and vision statement, please refer to the homepage [here](https://fishfugu.github.io/the-number-line/).
 
 But I still find myself asking:
 
@@ -60,7 +60,14 @@ Some further reading on the subject:
 - [Editage](https://www.editage.com/blog/what-is-literature-review-definition-types-and-examples/): This piece on _“What is Literature Review? Definition, Types and Examples”_ addresses some of my lingering questions about the forms a Literature Review can take and what is deemed appropriate. As a summary, there are different types of literature reviews, including:
 
   - **Narrative reviews**, which offer qualitative overviews of existing studies, and
-  - **Systematic reviews**, which employ structured methodologies to evaluate and synthesize findings from multiple studies.
+  - **Systematic reviews**, which employ structured methodologies to evaluate and synthesise findings from multiple studies.
+
+??? info "Yet More Reading on Lit Reviews"
+
+    - [USC Libraries](https://libguides.usc.edu/writingguide/literaturereview): “… A summary is a recap of the important information of the source, but a synthesis is a re-organisation, or a reshuffling, of that information in a way that informs how you are planning to investigate a research problem.”
+    - [WashU Libraries](https://libguides.wustl.edu/our?p=302677): “… While the main focus of an academic research paper is to support your own argument, the focus of a literature review is to summarise and synthesise the arguments and ideas of others.” - [The University of Edinburgh](https://institute-academic-development.ed.ac.uk/study-hub/learning-resources/literature-review): “… your task is to build an argument, not a library.”
+    - [r/writing - I don’t understand how to write a literature review](https://www.reddit.com/r/writing/comments/qy6e5u/i_dont_understand_how_to_write_a_literature_review/?rdt=38422): “… it is not a summary of journal articles related to your topic… the reader wants to know (i) _what arguments did each article make_, (ii) _what results did each article discover_, and (iii) _how is that article related to your topic/argument_.”
+    - [Wikipedia - Literature review](https://en.wikipedia.org/wiki/Literature_review): “… A good literature review has a proper research question, a proper theoretical framework, and/or a chosen research methodology.”
 
 ## What This Means for My Current Work
 
@@ -68,12 +75,7 @@ The Purdue University reference aligns with conversations I had with my supervis
 
 Additionally, the Editage piece mentioning **narrative reviews** reflects the general approach I intend to adopt. This qualitative, discursive method seems to suit my research goals well.
 
-??? info "Yet More Reading on Lit Reviews"
-
-    - [USC Libraries](https://libguides.usc.edu/writingguide/literaturereview): “… A summary is a recap of the important information of the source, but a synthesis is a re-organization, or a reshuffling, of that information in a way that informs how you are planning to investigate a research problem.”
-    - [WashU Libraries](https://libguides.wustl.edu/our?p=302677): “… While the main focus of an academic research paper is to support your own argument, the focus of a literature review is to summarize and synthesize the arguments and ideas of others.” - [The University of Edinburgh](https://institute-academic-development.ed.ac.uk/study-hub/learning-resources/literature-review): “… your task is to build an argument, not a library.”
-    - [r/writing - I don’t understand how to write a literature review](https://www.reddit.com/r/writing/comments/qy6e5u/i_dont_understand_how_to_write_a_literature_review/?rdt=38422): “… it is not a summary of journal articles related to your topic… the reader wants to know (i) _what arguments did each article make_, (ii) _what results did each article discover_, and (iii) _how is that article related to your topic/argument_.”
-    - [Wikipedia - Literature review](https://en.wikipedia.org/wiki/Literature_review): “… A good literature review has a proper research question, a proper theoretical framework, and/or a chosen research methodology.”
+I would also like to call-out a repeated reference I saw, across much of my reading on the subject, to the idea of the difference between "**synthesis**" and "**summarisation**". While some texts refer to both equally, many emphasise the value, or necessity, of **synthesis** in a _good_ Literature Review. This feels like something I understood intuitively, from last year's reading on the subject, but something with became much clearer to my as I began work in my new Literature Review.
 
 # Summary
 

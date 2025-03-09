@@ -140,7 +140,7 @@ A [**ring**](<https://en.wikipedia.org/wiki/Ring_(mathematics)>) is a **set** eq
     2. "**addition**" has an **identity element**
     3. all **elements** have an inverse under **addition**
 - "**multiplication**" is **associative** - that is:
-    - \( a * b = b * a \)
+    - \( (a \ast b) \ast c = a \ast (b \ast c) \)
 - the **distributive property** holds - that is:
     - \( a \ast ( b + c ) = (a \ast b) + (a \ast c) \)
 
