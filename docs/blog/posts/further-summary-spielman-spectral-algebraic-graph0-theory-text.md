@@ -16,7 +16,7 @@ categories:
   - Spectral and Algebraic Graph Theory, Sections IV to VII
 tags:
   - summary
-  - preentation
+  - presentation
 authors:
   - fishfugu
 ---

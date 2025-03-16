@@ -15,7 +15,7 @@ categories:
   - Spectral and Algebraic Graph Theory, Sections I to III
 tags:
   - summary
-  - preentation
+  - presentation
 authors:
   - fishfugu
 ---
