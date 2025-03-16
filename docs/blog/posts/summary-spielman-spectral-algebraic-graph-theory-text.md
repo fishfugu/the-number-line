@@ -45,7 +45,7 @@ these moments are prime opportunities to create short illustrations or animation
     2. **Matrix Explanations**: Use small dimension examples (3×3, 4×4) with color highlighting of rows/columns and walk the viewer through transformations.
     3. **Proof Outlines**: Explainer animations can skip heavy algebraic details and focus on key geometric or combinatorial insights.
 - **Keeping it Small**
-    1. What follows is a summary of all the chapters in sections I to III fo the text.
+    1. What follows is a summary of all the chapters in sections I to III of the text.
     2. It is NOT propoosed that we cover all of the topics or attempt to make all the animations listed. This list of summaries is intended as a list of ideas to choose from, for the final presentation / work required for the _MATH503 Advanced Topics in Mathematics_ unit.
 
 <!-- more -->
