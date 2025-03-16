@@ -228,9 +228,9 @@ these moments are prime opportunities to create short illustrations or animation
 #### Potential Visual / Animation Ideas
 
 1. **Group to Graph**  
-   - Step through how a set of generators (e.g., bit-flip operations) becomes edges in a Cayley graph.  
+    - Step through how a set of generators (e.g., bit-flip operations) becomes edges in a Cayley graph.  
 2. **Paley Graph**  
-   - Diagram a finite field example, color-coding edges for **quadratic residues** vs. **nonresidues**.
+    - Diagram a finite field example, color-coding edges for **quadratic residues** vs. **nonresidues**.
 
 ---
 
@@ -339,12 +339,12 @@ these moments are prime opportunities to create short illustrations or animation
    - Highlight how removing one row and column of \(L\) and taking a determinant counts all spanning trees.
       - NOTE: this seems to have analogies with **Matrix Inversion via Adjugate** (“classical adjoint” formula), **Cramér’s Rule** (Solving Linear Systems by Cofactors), **Laplacian Minors in Other Graph Counting** (Directed Graphs (Arborescences)), **Schur Complements and Principal Minors** (Block-Matrix Elimination), **Enumerating Combinatorial Objects via Minors** (Cycle-cocycle reversals or certain cycle counting / integrals of certain matrix determinants in enumerative geometry, or counting tilings in a planar graph)
       - some of these connections are obvious (to me) but some are not as much - basically, wherever we see “expansion by minors” in linear algebra, or “principal minors” in spectral graph theory and geometry, that same “remove a row and a column, then compute the determinant” procedure is fundamental. **TODO: look into these overlaps (especially where NOT as obvious) a bit more. What have other peple done to connect these areas?**
-2. **Growing a Random Tree**  
-   - Show an animation of sampling edges in proportion to their “effective” contribution.
-      - assigning each edge \( e \) a probability of being selected that reflects its “importance” or “contribution” to the structure you want to preserve. Depending on the application, that “effective contribution” may be measured by:
-          - Effective Resistance in the graph’s Laplacian, or
-          - Leverage Score (a closely related concept when working with the Laplacian or adjacency operators), or
-          - Some other measure of how “critical” an edge is to connectivity, cuts, or distances.
+2. Growing a Random Tree
+    - Show an animation of sampling edges in proportion to their “effective” contribution.
+        - assigning each edge \( e \) a probability of being selected that reflects its “importance” or “contribution” to the structure you want to preserve. Depending on the application, that “effective contribution” may be measured by:
+            - Effective Resistance in the graph’s Laplacian, or
+            - Leverage Score (a closely related concept when working with the Laplacian or adjacency operators), or
+            - Some other measure of how “critical” an edge is to connectivity, cuts, or distances.
 
 ---
 
@@ -427,22 +427,22 @@ these moments are prime opportunities to create short illustrations or animation
 #### Potential Visual / Animation Ideas
 
 1. Thermistor Graph
-   - Show temperature-dependent resistances, and how current flow changes at different “heat” levels.  
+    - Show temperature-dependent resistances, and how current flow changes at different “heat” levels.  
 2. Nonlinear Minimizationz
-   - Illustrate how the standard Laplacian energy is replaced by a more complex function in these networks.
-      - When you move from a linear resistor network (where resistances are constant) to a nonlinear network (e.g., thermistors whose resistance depends on current or temperature), the “energy” you minimize is no longer a simple quadratic form. Illustrating this visually can help people see how and why the usual linear Laplacian analysis no longer applies directly.
-          - Show the Linear (Standard) Laplacian Energy First
-              - Draw a Small Network
-              - Set Up the Classic Energy Expression
-              - Animate “Solving” for Potentials
-          - Introduce the Nonlinear or Thermistor-Like Edge
-              - Change One Edge to a “Thermistor”
-              - Show the Modified Energy Expression
-              - Highlight the Nonlinear Minimisation
-          - Make It Visually Clear
-              - Side-by-Side “Energy Curve”. On the left, show the linear energy for a single edge: a parabola vs. \( \Delta V \). On the right, show a curve that’s no longer symmetric or linear w.r.t. \( \Delta V \). e.g.: an exponentially decreasing slope (NTC) or increasing slope (PTC).
-              - Animate a “Slider” - TODO: work out if this is possible or not.
-          - Summarise the Key Differences
-              - By turning the usual “parabola” (quadratic energy) into a dynamic or “curved” function shaped by an edge’s temperature/current dependence, we illustrate that “the standard Laplacian energy is replaced by a more complex function.” This means no single pass of matrix inversion solves the system. Instead, we get an iterative, nonlinear problem - exactly capturing how real-world thermistors and other nonlinear elements behave in a circuit or network, and more complex real-world scenarios.
+    - Illustrate how the standard Laplacian energy is replaced by a more complex function in these networks.
+        - When you move from a linear resistor network (where resistances are constant) to a nonlinear network (e.g., thermistors whose resistance depends on current or temperature), the “energy” you minimize is no longer a simple quadratic form. Illustrating this visually can help people see how and why the usual linear Laplacian analysis no longer applies directly.
+            - Show the Linear (Standard) Laplacian Energy First
+                - Draw a Small Network
+                - Set Up the Classic Energy Expression
+                - Animate “Solving” for Potentials
+            - Introduce the Nonlinear or Thermistor-Like Edge
+                - Change One Edge to a “Thermistor”
+                - Show the Modified Energy Expression
+                - Highlight the Nonlinear Minimisation
+            - Make It Visually Clear
+                - Side-by-Side “Energy Curve”. On the left, show the linear energy for a single edge: a parabola vs. \( \Delta V \). On the right, show a curve that’s no longer symmetric or linear w.r.t. \( \Delta V \). e.g.: an exponentially decreasing slope (NTC) or increasing slope (PTC).
+                - Animate a “Slider” - TODO: work out if this is possible or not.
+            - Summarise the Key Differences
+                - By turning the usual “parabola” (quadratic energy) into a dynamic or “curved” function shaped by an edge’s temperature/current dependence, we illustrate that “the standard Laplacian energy is replaced by a more complex function.” This means no single pass of matrix inversion solves the system. Instead, we get an iterative, nonlinear problem - exactly capturing how real-world thermistors and other nonlinear elements behave in a circuit or network, and more complex real-world scenarios.
 
 ---
