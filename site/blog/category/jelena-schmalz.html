@@ -1,0 +1,2099 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://fishfugu.github.io/the-number-line/blog/category/jelena-schmalz.html">
+      
+      
+        <link rel="prev" href="graph-theory.html">
+      
+      
+        <link rel="next" href="math503.html">
+      
+      
+      <link rel="icon" href="../../assets/img/number-line-logo-favicon-teal.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.6">
+    
+    
+      
+        <title>Jelena Schmalz - The Number Line</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../assets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#jelena-schmalz" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="The Number Line" class="md-header__button md-logo" aria-label="The Number Line" data-md-component="logo">
+      
+  <img src="../../assets/img/number-line-logo-1.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Number Line
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Jelena Schmalz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../elliptic-curves/elliptic-curves-101/010-ec-101-introduction.html" class="md-tabs__link">
+          
+  
+    
+  
+  Elliptic Curves
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../index.html" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="The Number Line" class="md-nav__button md-logo" aria-label="The Number Line" data-md-component="logo">
+      
+  <img src="../../assets/img/number-line-logo-1.png" alt="logo">
+
+    </a>
+    The Number Line
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Elliptic Curves
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Elliptic Curves
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Elliptic Curves 101
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Elliptic Curves 101
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/010-ec-101-introduction.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/020-set-group-ring-field.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is a Set, a Group, a Ring, and a Field?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/030-discrete-logarithm.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Discrete Logarithm Problem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/040-elliptic-curves-real.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elliptic Curves over \( \mathbb{R} \)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/050-theorem-line-intersection.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Theorem / Proof, A line connecting P and Q always intersects a third point
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/060-additive-inverse.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Additive Inverse
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/070-point-addition.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adding Points, Doubling Points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/080-weierstrass-general.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expanding from Weierstrass To General Form
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/090-associativity.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ Associativity ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/100-projective-plane.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ The Projective Plane ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/110-homogeneous-equations.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ Homogeneous Equations ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/120-elliptic-curves-finite-field.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ Elliptic Curves In a Finite Field ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/130-modular-multiplicative-inverse.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ The Modular Multiplicative Inverse ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/140-slope-formal-derivative.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ The Slope of an Elliptic Curve (Formal Derivative) ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/150-arithmetic-finite-field.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ Arithmetic In A Finite Field ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/160-doubling-points-finite-field.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ Doubling Points in a Finite Field ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/900-acknowledgements-bibliography.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ~~ Acknowledgements and Bibliography ~~
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/elliptic-curves-101/test.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    test page
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Practical Cryptography
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Practical Cryptography
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/practical-cryptography/010-threshold-cryptography.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Threshold Crytography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/practical-cryptography/020-mathematics-of-threshold.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Mathematics of Threshold Cryptography
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elliptic-curves/bibliography-references.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References (Under Construction)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../index.html" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2025.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="2024-literature-review.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024 Literature Review
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="2025-literature-review.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025 Literature Review
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="advanced-topics-in-mathematics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Topics in Mathematics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="algebraic-graph-theory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algebraic Graph Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="cricos-code-000441g.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CRICOS CODE 000441G
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="daniel-a-spielman.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Daniel A. Spielman
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="elliptic-curves.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Elliptic Curves
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="graph-theory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graph Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+      
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="jelena-schmalz.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Jelena Schmalz
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="math503.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MATH503
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="master-of-scientific-studies.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Master of Scientific Studies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="masters-thesis.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Master's Thesis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="research-methods-in-the-sciences.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Research Methods in the Sciences
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="sci500.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SCI500
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="scope.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scope
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="spectral-graph-theory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spectral Graph Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="spectral-and-algebraic-graph-theory.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spectral and Algebraic Graph Theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="spectral-and-algebraic-graph-theory-sections-i-to-iii.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spectral and Algebraic Graph Theory, Sections I to III
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="une.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UNE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner">
+      <header class="md-typeset">
+        <h1 id="jelena-schmalz">Jelena Schmalz</h1>
+      </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/4126177" alt="Nicholas Gledhill">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-03-16 00:00:00+00:00">March 16, 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="une.html" class="md-meta__link">UNE</a>, 
+              <a href="master-of-scientific-studies.html" class="md-meta__link">Master of Scientific Studies</a>, 
+              <a href="cricos-code-000441g.html" class="md-meta__link">CRICOS CODE 000441G</a>, 
+              <a href="jelena-schmalz.html" class="md-meta__link">Jelena Schmalz</a>, 
+              <a href="math503.html" class="md-meta__link">MATH503</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              12 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="summary-of-daniel-a-spielman-spectral-and-algebraic-graph-theory"><a class="toclink" href="../2025/03/16/summary-of-daniel-a-spielman-_spectral-and-algebraic-graph-theory_.html">Summary of: Daniel A. Spielman, <em>Spectral and Algebraic Graph Theory</em></a></h2>
+<p><em>Parts I to III</em></p>
+<h3 id="overall-summary"><a class="toclink" href="../2025/03/16/summary-of-daniel-a-spielman-_spectral-and-algebraic-graph-theory_.html#overall-summary">Overall Summary</a></h3>
+<p>Each chapter of <em>Spectral and Algebraic Graph Theory</em> connects combinatorial graph properties with matrix-centric, eigenvalue-based interpretations. The text’s many theorems and proofs lend themselves to visual representations - from small <strong>numeric examples</strong> to <strong>geometric embeddings</strong>, from <strong>random walks</strong> to advanced topics such <strong>expanders</strong> and <strong>Ramanujan graphs</strong>.  </p>
+<p><strong>Whenever</strong> the text introduces:</p>
+<ul>
+<li>A new <em>graph concept</em> (such as planarity, coloring, or random walks) or  </li>
+<li>A <em>core algebraic identity</em> (such Courant-Fischer or Schur complements),<br />
+these moments are prime opportunities to create short illustrations or animations, accompanied by a clear, concise audio script that grounds the ideas in intuitive, real-world or physical metaphors.</li>
+</ul>
+<hr />
+<h3 id="how-to-turn-this-into-an-audio-visual-explainer"><a class="toclink" href="../2025/03/16/summary-of-daniel-a-spielman-_spectral-and-algebraic-graph-theory_.html#how-to-turn-this-into-an-audio-visual-explainer">How to Turn This Into an Audio-Visual Explainer</a></h3>
+<ul>
+<li>
+<p><strong>Scene-by-Scene Organisation</strong>: Each of the major “parts” (I to VII) naturally forms an episode or a module (a series of episodes, strung together, thematically, with call-outs to watch the previous episodes if you haven't already). Chapters within each part can be “mini-segments” or separate lessons.</p>
+</li>
+<li>
+<p><strong>Animations</strong>:</p>
+<ol>
+<li><strong>Graph Layouts &amp; Vibrations</strong>: Effective to show dynamic transitions, either by “spring” motion or random walk tokens.</li>
+<li><strong>Matrix Explanations</strong>: Use small dimension examples (3×3, 4×4) with color highlighting of rows/columns and walk the viewer through transformations.</li>
+<li><strong>Proof Outlines</strong>: Explainer animations can skip heavy algebraic details and focus on key geometric or combinatorial insights (e.g., “min-cut <span class="arithmatex"><span class="MathJax_Preview"> \equiv </span><script type="math/tex"> \equiv </script></span> second eigenvalue”).</li>
+</ol>
+</li>
+<li><strong>Audio Script Guidance</strong>:<ul>
+<li>Maintain a narrative style that first states the practical question (“How do we detect communities in a network?”), then introduces the relevant concept (“We look at the second eigenvector of the graph’s Laplacian...”), and finally highlights the big takeaway (“The sign pattern splits the graph into two nearly separate communities!”).</li>
+<li>Use analogies: e.g., “Just like a guitar string’s fundamental vibration mode, the second eigenvector of a graph ‘shakes’ it in the simplest non-trivial way.”</li>
+</ul>
+</li>
+</ul>
+
+    
+      <nav class="md-post__action">
+        <a href="../2025/03/16/summary-of-daniel-a-spielman-_spectral-and-algebraic-graph-theory_.html">
+          Continue reading
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/4126177" alt="Nicholas Gledhill">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-03-09 00:00:00+00:00">March 9, 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="une.html" class="md-meta__link">UNE</a>, 
+              <a href="master-of-scientific-studies.html" class="md-meta__link">Master of Scientific Studies</a>, 
+              <a href="cricos-code-000441g.html" class="md-meta__link">CRICOS CODE 000441G</a>, 
+              <a href="jelena-schmalz.html" class="md-meta__link">Jelena Schmalz</a>, 
+              <a href="sci500.html" class="md-meta__link">SCI500</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              16 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="another-draft-of-the-scope-and-possible-structure-for-my-masters-thesis"><a class="toclink" href="../2025/03/09/another-draft-of-the-scope-and-possible-structure-for-my-masters-thesis.html">Another Draft of the Scope and Possible Structure for my Master's Thesis</a></h2>
+<p>I have started to develop an interest in some of the history of the study of Elliptic Curves, and an understanding that putting the prior work on the subject into its historical, chronoological and cultural background can illuminate some of the discoveries and why they are all important.</p>
+<p>Which has spawned this new draft of a potential stucture for my Thesis.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../2025/03/09/another-draft-of-the-scope-and-possible-structure-for-my-masters-thesis.html">
+          Continue reading
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/4126177" alt="Nicholas Gledhill">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-02-25 00:00:00+00:00">February 25, 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="une.html" class="md-meta__link">UNE</a>, 
+              <a href="master-of-scientific-studies.html" class="md-meta__link">Master of Scientific Studies</a>, 
+              <a href="cricos-code-000441g.html" class="md-meta__link">CRICOS CODE 000441G</a>, 
+              <a href="jelena-schmalz.html" class="md-meta__link">Jelena Schmalz</a>, 
+              <a href="sci500.html" class="md-meta__link">SCI500</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              5 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="literature-review-on-elliptic-curves-defining-the-scope"><a class="toclink" href="../2025/02/25/literature-review-on-elliptic-curves---defining-the-scope.html">Literature Review on Elliptic Curves - Defining the Scope</a></h2>
+<p>A first stab at the structure and scope for this stage of the Literature Review.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../2025/02/25/literature-review-on-elliptic-curves---defining-the-scope.html">
+          Continue reading
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/4126177" alt="Nicholas Gledhill">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-02-25 00:00:00+00:00">February 25, 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="une.html" class="md-meta__link">UNE</a>, 
+              <a href="master-of-scientific-studies.html" class="md-meta__link">Master of Scientific Studies</a>, 
+              <a href="cricos-code-000441g.html" class="md-meta__link">CRICOS CODE 000441G</a>, 
+              <a href="jelena-schmalz.html" class="md-meta__link">Jelena Schmalz</a>, 
+              <a href="sci500.html" class="md-meta__link">SCI500</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              3 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="literature-review-original-structure-ideas"><a class="toclink" href="../2025/02/25/literature-review---original-structure-ideas.html">Literature Review - Original Structure Ideas</a></h2>
+<p>Some of the original, more wide ranging ideas that arose while researching ideas for the Literature Review.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../2025/02/25/literature-review---original-structure-ideas.html">
+          Continue reading
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/4126177" alt="Nicholas Gledhill">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-02-24 00:00:00+00:00">February 24, 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="une.html" class="md-meta__link">UNE</a>, 
+              <a href="master-of-scientific-studies.html" class="md-meta__link">Master of Scientific Studies</a>, 
+              <a href="cricos-code-000441g.html" class="md-meta__link">CRICOS CODE 000441G</a>, 
+              <a href="jelena-schmalz.html" class="md-meta__link">Jelena Schmalz</a>, 
+              <a href="sci500.html" class="md-meta__link">SCI500</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              5 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="this-blog-what-its-all-about"><a class="toclink" href="../2025/02/24/this-blog--what-its-all-about.html">This Blog – What It's All About</a></h2>
+<p>Last year, I graduated from my <a href="https://en.wikipedia.org/wiki/Bachelor_of_Science">Bachelor of Science (BSc)</a> with the <a href="https://www.une.edu.au/study/courses/bachelor-of-science?gad_source=1&amp;gclid=Cj0KCQiA8q--BhDiARIsAP9tKI0Qu3pFI3EhIMgdgJObHIEcCArYRuviNrwXU59cKB92mjWQijiNdywaAq98EALw_wcB&amp;gclsrc=aw.ds&amp;international=true">University of New England</a>. As part of that, in my final year of study, I completed a unit called <a href="https://www.une.edu.au/study/units/science-report-sci395">Science Report (SCI395)</a>, which can be viewed as a concise <a href="https://en.wikipedia.org/wiki/Research">research</a> or <a href="https://en.wikipedia.org/wiki/Project">mini-project</a> designed for undergraduate students.</p>
+<p>I had noticed the unit earlier in my studies and had been intrigued by the prospect of enrolling. It seemed like excellent preparation for <a href="https://en.wikipedia.org/wiki/Postgraduate_education">postgraduate work</a>, which is something I was keen to pursue. In many ways, it felt like a <em>“small thesis”</em> or <em>“introduction to research”</em> for undergraduates.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../2025/02/24/this-blog--what-its-all-about.html">
+          Continue reading
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+      
+        
+          
+
+
+
+<nav class="md-pagination">
+  
+</nav>
+        
+      
+    </div>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2025 Nicholas Gledhill &nbsp &nbsp -- &nbsp &nbsp <a href="#__consent">Change cookie settings</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.action.edit", "content.tooltips", "content.blog", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.indexes", "navigation.sections", "search.suggest", "search.highlight", "search.share", "search.exclude"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>

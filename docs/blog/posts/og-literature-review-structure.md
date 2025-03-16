@@ -1,9 +1,16 @@
 ---
 date: 2025-02-25
 categories:
+  - UNE
+  - Master of Scientific Studies
+  - CRICOS CODE 000441G
+  - Jelena Schmalz
+  - SCI500
+  - Research Methods in the Sciences
   - 2024 Literature Review
   - Elliptic Curves
-  - Scope
+tags:
+  - scope
 authors:
   - fishfugu
 ---

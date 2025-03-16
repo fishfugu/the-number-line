@@ -75,6 +75,9 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - meta # Enables metadata in Markdown files
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js

@@ -21,7 +21,7 @@ the curve is [**non-singular**](https://mathworld.wolfram.com/Determinant.html).
 
 Elliptic curves that do not satisfy this condition are called **singular elliptic curves**.
 
-### **The Weierstrass Equation**
+### The Weierstrass Equation
 
 In the form:
 $$ y^2 = x^3 + Ax + B $$
@@ -45,13 +45,14 @@ See below, an animation of different elliptic curves in the Weierstrass Form, fo
 
 ---
 
-<div style="float: left; margin-right: 15px;">
-    <img src="img/geometry.jpg" alt="graph showing two different Elliptic Curves in the Real numbers, one continuous, and one with 2 separate sections" width="250px">
-</div>
+<figure markdown="span" style="float: left; margin-right: 10px;">
+  <img src="img/geometry.jpg" alt="graph showing elliptic curve with a discriminant less than zero" width="200px">
+  <figcaption>\( \Delta < 0 \)</figcaption>
+</figure>
 
 ## Geometric Features
 
-### **Discriminant and Shape**
+### Discriminant and Shape
 
 The shape of an elliptic curve in Weierstrass form depends on the **discriminant**:
 
@@ -61,9 +62,10 @@ $$ \Delta = -16(4A^3 + 27B^2) $$
 
 ---
 
-<div style="float: right; margin-left: 15px;">
-    <img src="img/geometry2.jpg" alt="graph showing two different Elliptic Curves in the Real numbers, one continuous, and one with 2 separate sections" width="250px">
-</div>
+<figure markdown="span" style="float: right; margin-left: 10px;">
+  <img src="img/geometry2.jpg" alt="graph showing elliptic curve with a discriminant greater than zero" width="200px">
+  <figcaption>\( \Delta > 0 \)</figcaption>
+</figure>
 
 - If **\( \Delta < 0 \)**, the curve is a **single, connected loop**.  
   The cubic equation: \( x^3 + Ax + B = 0 \) has **one real solution**.
@@ -73,16 +75,17 @@ $$ \Delta = -16(4A^3 + 27B^2) $$
 
 **Note:** The definition of these "loops" will become clearer once we introduce the concept of [**the point at infinity**](100-projective-plane.md). For now, we accept that the far end of each curve **connects at infinity**.
 
-### **Symmetry**
+### Symmetry
 
 Every elliptic curve in Weierstrass form is **symmetric** about the **x-axis**.  
 If \( (x, y) \) is on the curve, then so is \( (x, -y) \).
 
 ---
 
-<div style="float: right; margin-left: 15px;">
-    <img src="img/group-law.jpg" alt="graph showing two different Elliptic Curves in the Real numbers, one continuous, and one with 2 separate sections" width="300px">
-</div>
+<figure markdown="span" style="float: right; margin-left: 10px;">
+  <img src="img/group-law.jpg" alt="graph showing the addition of points P and Q" width="220px">
+  <figcaption>Adding Points</figcaption>
+</figure>
 
 ## Group Law: Addition of Points
 
@@ -96,11 +99,12 @@ If **\( P \)** and **\( Q \)** are points on the curve, their sum **\( P + Q \)*
 
 ---
 
-<div style="float: left; margin-right: 15px;">
-    <img src="img/group-law-2.png" alt="graph showing two different Elliptic Curves in the Real numbers, one continuous, and one with 2 separate sections" width="300px">
-</div>
+<figure markdown="span" style="float: left; margin-right: 10px;">
+  <img src="img/group-law-2.png" alt="graph showing the doubling of points P" width="250px">
+  <figcaption>Doubling Points</figcaption>
+</figure>
 
-### **Special Cases in Point Addition**
+### Special Cases in Point Addition
 
 #### When \( P = Q \)
 
@@ -140,11 +144,11 @@ NOTE: When defined in \( \mathbb{R} \), it can easily be shown that, if the tang
 
 ## Applications
 
-### **[Cryptography](https://en.wikipedia.org/wiki/Cryptography)**
+### [Cryptography](https://en.wikipedia.org/wiki/Cryptography)
 
 Elliptic curves over \( \mathbb{R} \) serve as **simpler models** for understanding more **complex cryptographic schemes** over finite fields and rings, including those used in **Elliptic Curve Cryptography (ECC)**.
 
-### **[Theoretical Mathematics](https://en.wikipedia.org/wiki/Algebraic_geometry)**
+### [Theoretical Mathematics](https://en.wikipedia.org/wiki/Algebraic_geometry)
 
 Elliptic curves are studied for their properties in **algebraic geometry** and **number theory**.
 
@@ -152,11 +156,11 @@ Elliptic curves are studied for their properties in **algebraic geometry** and *
 
 ## Challenges & Considerations
 
-### **[Visualisation](https://mathworld.wolfram.com/EllipticCurve.html#:~:text=Informally%2C%20an%20elliptic%20curve%20is,form%20of%20an%20elliptic%20curve.)**
+### [Visualisation](https://mathworld.wolfram.com/EllipticCurve.html#:~:text=Informally%2C%20an%20elliptic%20curve%20is,form%20of%20an%20elliptic%20curve.)
 
 Unlike elliptic curves over finite fields (used in cryptography), curves over \( \mathbb{R} \) can be **graphically represented**, making visual learning **more intuitive**.
 
-### **[Complexity in Handling](<https://math.libretexts.org/Under_Construction/Purgatory/Book%3A_Active_Calculus_(Boelkins_et_al.)/01%3A_Understanding_the_Derivative/1.07%3A_Limits_Continuity_and_Differentiability>)**
+### [Complexity in Handling](<https://math.libretexts.org/Under_Construction/Purgatory/Book%3A_Active_Calculus_(Boelkins_et_al.)/01%3A_Understanding_the_Derivative/1.07%3A_Limits_Continuity_and_Differentiability>)
 
 While real-number elliptic curves are **easier to visualise**, they introduce complexities in ensuring **mathematical rigor**, especially concerning:
 
