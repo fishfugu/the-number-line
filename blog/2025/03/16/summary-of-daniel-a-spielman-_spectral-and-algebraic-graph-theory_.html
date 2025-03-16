@@ -2751,10 +2751,14 @@ Pkg.add(&quot;Laplacians&quot;)
 </ul>
 <h4 id="potential-visual-animation-ideas_6">Potential Visual / Animation Ideas</h4>
 <ol>
-<li><strong>Group to Graph</strong>  </li>
+<li><strong>Group to Graph</strong>  <ul>
 <li>Step through how a set of generators (e.g., bit-flip operations) becomes edges in a Cayley graph.  </li>
-<li><strong>Paley Graph</strong>  </li>
+</ul>
+</li>
+<li><strong>Paley Graph</strong>  <ul>
 <li>Diagram a finite field example, color-coding edges for <strong>quadratic residues</strong> vs. <strong>nonresidues</strong>.</li>
+</ul>
+</li>
 </ol>
 <hr />
 <h3 id="chapter-8-eigenvalues-of-random-graphs">Chapter 8: Eigenvalues of Random Graphs</h3>
@@ -2874,12 +2878,14 @@ Pkg.add(&quot;Laplacians&quot;)
 <li>some of these connections are obvious (to me) but some are not as much - basically, wherever we see “expansion by minors” in linear algebra, or “principal minors” in spectral graph theory and geometry, that same “remove a row and a column, then compute the determinant” procedure is fundamental. <strong>TODO: look into these overlaps (especially where NOT as obvious) a bit more. What have other peple done to connect these areas?</strong></li>
 </ul>
 </li>
-<li><strong>Growing a Random Tree</strong>  </li>
+<li>Growing a Random Tree<ul>
 <li>Show an animation of sampling edges in proportion to their “effective” contribution.<ul>
 <li>assigning each edge <span class="arithmatex"><span class="MathJax_Preview"> e </span><script type="math/tex"> e </script></span> a probability of being selected that reflects its “importance” or “contribution” to the structure you want to preserve. Depending on the application, that “effective contribution” may be measured by:<ul>
 <li>Effective Resistance in the graph’s Laplacian, or</li>
 <li>Leverage Score (a closely related concept when working with the Laplacian or adjacency operators), or</li>
 <li>Some other measure of how “critical” an edge is to connectivity, cuts, or distances.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -2971,9 +2977,11 @@ Pkg.add(&quot;Laplacians&quot;)
 </ul>
 <h4 id="potential-visual-animation-ideas_17">Potential Visual / Animation Ideas</h4>
 <ol>
-<li>Thermistor Graph</li>
+<li>Thermistor Graph<ul>
 <li>Show temperature-dependent resistances, and how current flow changes at different “heat” levels.  </li>
-<li>Nonlinear Minimizationz</li>
+</ul>
+</li>
+<li>Nonlinear Minimizationz<ul>
 <li>Illustrate how the standard Laplacian energy is replaced by a more complex function in these networks.<ul>
 <li>When you move from a linear resistor network (where resistances are constant) to a nonlinear network (e.g., thermistors whose resistance depends on current or temperature), the “energy” you minimize is no longer a simple quadratic form. Illustrating this visually can help people see how and why the usual linear Laplacian analysis no longer applies directly.<ul>
 <li>Show the Linear (Standard) Laplacian Energy First<ul>
@@ -2995,6 +3003,8 @@ Pkg.add(&quot;Laplacians&quot;)
 </li>
 <li>Summarise the Key Differences<ul>
 <li>By turning the usual “parabola” (quadratic energy) into a dynamic or “curved” function shaped by an edge’s temperature/current dependence, we illustrate that “the standard Laplacian energy is replaced by a more complex function.” This means no single pass of matrix inversion solves the system. Instead, we get an iterative, nonlinear problem - exactly capturing how real-world thermistors and other nonlinear elements behave in a circuit or network, and more complex real-world scenarios.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
