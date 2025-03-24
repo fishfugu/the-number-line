@@ -170,6 +170,6 @@ For each section:
 
 2. **\(\mathbb{F}\)**: [Koblitz, Neal. “Elliptic Curve Cryptosystems.” Mathematics of Computation 48 (1987)](https://www.jstor.org/stable/pdf/2007884.pdf?refreqid=fastly-default%3A9f30ab2ed4e65d3ce2b7425d4d08fdb4&ab_segments=&initiator=&acceptTC=1) - "[stable URL](https://www.jstor.org/stable/2007884)"
 
-3. **\(\mathbb{R}\)**: [Silverman, Joseph H. The Arithmetic of Elliptic Curves, Graduate Texts in Mathematics, Vol. 106 (Springer, 1986)](http://www.pdmi.ras.ru/~lowdimma/BSD/Silverman-Arithmetic_of_EC.pdf)
+3. **\(\mathbb{Q}\)**: [Silverman, Joseph H. The Arithmetic of Elliptic Curves, Graduate Texts in Mathematics, Vol. 106 (Springer, 1986)](http://www.pdmi.ras.ru/~lowdimma/BSD/Silverman-Arithmetic_of_EC.pdf)
 
 4. **\(\mathbb{C}\)**: Lang, Serge. Elliptic Functions, 2nd ed., Graduate Texts in Mathematics, Vol. 112 (Springer, 1987) - but I haven't been able to get a copyt of this yet... so... 
