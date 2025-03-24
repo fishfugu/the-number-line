@@ -52,6 +52,16 @@ mkdocs gh-deploy
 
 ---
 
+## Converting files to PDF using pandoc
+
+```bash
+pandoc --from=markdown+tex_math_single_backslash \
+       --to=pdf \
+       --pdf-engine=pdflatex \
+       --output=output.pdf \
+       docs/blog/posts/summary-spielman-spectral-algebraic-graph-theory-text.md
+```
+
 ## 🤝 Contributing
 
 Contributions are welcome! If you’d like to improve **The Number Line**, here’s how:

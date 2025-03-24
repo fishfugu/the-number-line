@@ -62,8 +62,8 @@ copyright: >
   <a href="#__consent">Change cookie settings</a>
 
 plugins:
-  - tags
   - search
+  - tags
   - blog:
       authors_profiles: true
 
@@ -90,6 +90,9 @@ extra_css:
 
 nav:
   - Home: index.md
+  - Spectral Graph Theory:
+      - MATH503 Advanced Topics in Mathematics:
+          - Introduction: spectral-graph-theory/math503-advanced-topics-in-mathematics/010-spectral-graph-theory-introduction.md
   - Elliptic Curves:
       - Elliptic Curves 101:
           - Introduction: elliptic-curves/elliptic-curves-101/010-ec-101-introduction.md

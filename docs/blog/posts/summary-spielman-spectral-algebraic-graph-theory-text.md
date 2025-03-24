@@ -187,7 +187,7 @@ these moments are prime opportunities to create short illustrations or animation
     - hypercubes,
     - product graphs (including **rings**, **grids**).
 - Known eigenvalues / eigenvectors for each and how they exemplify broader spectral properties.
-- Test vectors can give quick lower / upper bounds on the second-smallest Laplacian eigenvalue (\( \lambda_2 \)).
+- Test vectors can give quick lower / upper bounds on the second-smallest Laplacian eigenvalue \( \lambda_2 \).
 
 #### Potential Visual / Animation Ideas
 

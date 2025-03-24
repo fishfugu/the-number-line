@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Manim partial run",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/manim/scenes/sagt.py",
+            "args": [
+                "CustomScene",
+                "-ph",
+                "--from_animation_number=3",
+                "--upto_animation_number=6"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}

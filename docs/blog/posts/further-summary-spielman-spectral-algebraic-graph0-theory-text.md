@@ -26,6 +26,7 @@ authors:
 
 _Parts IV to VII_
 
+<!-- more -->
 
 ## Part IV: Spectra and Graph Structure
 

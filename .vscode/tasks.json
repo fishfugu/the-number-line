@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Render Manim Partial",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "-m",
+                "manim",
+                "manim/scenes/sagt.py", // your .py file
+                "CompleteGraph", // your scene name
+                "-pqh", // or -pl, etc. (preview, quality, etc.)
+                // If you are using manim (3b1b version):
+                // "--from_animation_number=3", 
+                // "--upto_animation_number=6",
+                // or your own partial-run options
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
