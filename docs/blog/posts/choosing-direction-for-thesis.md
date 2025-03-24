@@ -20,6 +20,8 @@ authors:
 
 To help me focus my efforts, my thesis supervisor asked me to focus on which of the most general areas (the differen Fields and Rings on which Elliptic curves are defined) I would like to focus on for my thesis - as this will instruct the reqwuirements of the Literature Revieww I'm working on right now, and help to illuminate what I'm trying to achieve with my thesis.
 
+<!-- more -->
+
 Elliptic Curves (ECs) are wonderfully rich objects precisely because they behave very differently depending on the Field (or Ring) over which you consider them. Each choice (over the Reals \(\mathbf{R}\), a Finite Field \(\mathbf{F}_p\), the Rationals \(\mathbf{Q}\), or the Complex Numbers \(\mathbf{C}\)) opens the door to a slightly different set of questions and techniques. Below is an overview of how each path typically unfolds and what sort of research directions one might pursue.
 
 ---
@@ -166,4 +168,6 @@ For each section:
 
 2. **\(\mathbf{F}\)**: [Koblitz, Neal. “Elliptic Curve Cryptosystems.” Mathematics of Computation 48 (1987)](https://www.jstor.org/stable/pdf/2007884.pdf?refreqid=fastly-default%3A9f30ab2ed4e65d3ce2b7425d4d08fdb4&ab_segments=&initiator=&acceptTC=1) - "[stable URL](https://www.jstor.org/stable/2007884)"
 
-3. [Silverman, Joseph H. The Arithmetic of Elliptic Curves, Graduate Texts in Mathematics, Vol. 106 (Springer, 1986)]()
+3. **\(\mathbf{R}\)**: [Silverman, Joseph H. The Arithmetic of Elliptic Curves, Graduate Texts in Mathematics, Vol. 106 (Springer, 1986)](http://www.pdmi.ras.ru/~lowdimma/BSD/Silverman-Arithmetic_of_EC.pdf)
+
+4. **\(\mathbf{C}\)**: Lang, Serge. Elliptic Functions, 2nd ed., Graduate Texts in Mathematics, Vol. 112 (Springer, 1987) - but I haven't been able to get a copyt of this yet... so... 
