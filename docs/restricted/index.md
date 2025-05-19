@@ -96,3 +96,11 @@ Oral presentation.
 ## mkDocs Doco
 
 https://squidfunk.github.io/mkdocs-material/reference/annotations/
+
+
+# Hasse's Theorem
+
+Videos on Python code:
+- https://youtu.be/S_mw2TRZByc?si=OFTrqeTAKJckpTbR
+- https://youtu.be/S_mw2TRZByc?si=LhD1ZbsNWF5vVchc
+

@@ -48,7 +48,7 @@ window:
   size: (2880, 1620) # Specific size, in pixels
 camera:
   resolution: (2880, 1620)
-  background_color: "#999999"
+  background_color: "#008080"
   fps: 30
   background_opacity: 0.5
 file_writer:
