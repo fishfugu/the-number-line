@@ -1,3 +1,4 @@
 manimgl
 networkx
 numpy
+setuptools

@@ -1719,9 +1719,6 @@ class SpectralIntuition_New(Scene):
         self.wait(1)
 
 
-
-from manimlib import *
-
 class LaplacianSubtractionAnimated(Scene):
     def construct(self):
         # --- Degree matrix D ---
@@ -1901,3 +1898,66 @@ class LaplacianSubtractionAnimated(Scene):
         equals_label = Tex(r"= \lambda \cdot \psi").scale(0.8).next_to(equals_vec, RIGHT)
         self.play(FadeIn(equals_label))
         self.wait(1)
+
+# make run-scene SCENE=RingVsField
+# make render-scene SCENE=RingVsField
+class RingVsField(Scene):
+    def construct(self):
+        # Title
+        title = Text("Rings vs Fields: What's the Big Difference?")
+        title.scale(1.2).to_edge(UP)
+        self.play(Write(title))
+
+        # Labels for Z and Q
+        z_label = Text("$\\mathbb{Z}$ (Integers)").set_color(BLUE).to_edge(LEFT).shift(UP*2)
+        q_label = Text("$\\mathbb{Q}$ (Rationals)").set_color(GREEN).to_edge(RIGHT).shift(UP*2)
+        self.play(FadeIn(z_label), FadeIn(q_label))
+
+        # Multiplication examples
+        z_mult = Tex("2 \\times 3 = 6").set_color(BLUE).next_to(z_label, DOWN*2)
+        q_mult = Tex("2 \\times 3 = 6").set_color(GREEN).next_to(q_label, DOWN*2)
+        self.play(Write(z_mult), Write(q_mult))
+
+        # Division that works: 6 / 2
+        z_div_good = Tex("6 \\div 2 = 3").set_color(BLUE).next_to(z_mult, DOWN*1.5)
+        q_div_good = Tex("6 \\div 2 = 3").set_color(GREEN).next_to(q_mult, DOWN*1.5)
+        self.play(Write(z_div_good), Write(q_div_good))
+
+        # Division that fails in Z: 1 / 2
+        z_div_fail = Tex("1 \\div 2 = ?").set_color(BLUE).next_to(z_div_good, DOWN*1.5)
+        q_div_ok = Tex("1 \\div 2 = 0.5").set_color(GREEN).next_to(q_div_good, DOWN*1.5)
+        self.play(Write(z_div_fail), Write(q_div_ok))
+
+        z_cross = Cross(z_div_fail, color=RED)
+        self.play(ShowCreation(z_cross))
+
+        # Multiplicative inverses
+        z_inv_1 = Tex("1^{-1} = 1").set_color(BLUE)
+        z_inv_2 = Tex("2^{-1} = ?").set_color(BLUE)
+        z_inv_3 = Tex("3^{-1} = ?").set_color(BLUE)
+        z_inv_group = VGroup(z_inv_1, z_inv_2, z_inv_3).arrange(DOWN).next_to(z_div_fail, DOWN*2)
+
+        q_inv_1 = Tex("2^{-1} = 1/2").set_color(GREEN)
+        q_inv_2 = Tex("3^{-1} = 1/3").set_color(GREEN)
+        q_inv_3 = Tex("-5^{-1} = -1/5").set_color(GREEN)
+        q_inv_group = VGroup(q_inv_1, q_inv_2, q_inv_3).arrange(DOWN).next_to(q_div_ok, DOWN*2)
+
+        self.play(FadeIn(z_inv_group), FadeIn(q_inv_group))
+
+        # Cross out invalid inverses in Z
+        z_crosses = [Cross(z_inv_2, color=RED), Cross(z_inv_3, color=RED)]
+        for cross in z_crosses:
+            self.play(ShowCreation(cross))
+
+        # Summary table manually (since no Table object in ManimGL)
+        summary_text = Text("Summary Table").to_edge(DOWN).shift(UP*1.5)
+        row1 = Text("Multiplication: \\checkmark \\quad \\checkmark").scale(0.8).next_to(summary_text, DOWN)
+        row2 = Text("Additive Inverses: \\checkmark \\quad \\checkmark").scale(0.8).next_to(row1, DOWN)
+        row3 = Text("Multiplicative Inverses: \\textcolor{red}{\\xmark (only $\\pm 1$)} \\quad \\textcolor{green}{\\checkmark (all $\\neq 0$)}").scale(0.8).next_to(row2, DOWN)
+
+        self.play(FadeIn(summary_text), FadeIn(row1), FadeIn(row2), FadeIn(row3))
+
+        box = SurroundingRectangle(row3, color=YELLOW)
+        self.play(ShowCreation(box))
+
+        self.wait(2)

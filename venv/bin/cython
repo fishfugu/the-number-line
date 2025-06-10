@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/Users/nicholasgledhill/NG Documents/Development/github.com/fishfugu/the-number-line/venv/bin/python" "$0" "$@"
-' '''
+#!/Users/nicholas/Documents/code/github.com/the-number-line/venv/bin/python3.11
 # -*- coding: utf-8 -*-
 import re
 import sys
